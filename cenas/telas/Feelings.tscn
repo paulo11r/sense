@@ -1,3 +1,49 @@
 [gd_scene format=3 uid="uid://cp2ju6y3rvqcy"]
 
-[node name="Feelings" type="Node2D" unique_id=1847706679]
+[ext_resource type="PackedScene" uid="uid://bykcl4crlqfs6" path="res://cenas/componentes/FeelingsCard.tscn" id="1_lhfn3"]
+
+[node name="Feelings" type="Control" unique_id=969584554]
+layout_mode = 3
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=2096732452]
+layout_mode = 0
+offset_right = 648.0
+offset_bottom = 272.0
+
+[node name="Header" type="HBoxContainer" parent="Content" unique_id=1377349490]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="Content/Header" unique_id=546178113]
+layout_mode = 2
+text = "Sentir e jogar"
+
+[node name="BackButton" type="Button" parent="Content/Header" unique_id=357881719]
+layout_mode = 2
+
+[node name="AccessibilityButton" type="Button" parent="Content/Header" unique_id=222469732]
+layout_mode = 2
+
+[node name="Subtitle" type="Label" parent="Content" unique_id=1046966377]
+layout_mode = 2
+text = "Como você está se sentindo agora?"
+
+[node name="Instruction" type="Label" parent="Content" unique_id=1579923900]
+layout_mode = 2
+text = "Toque no que mais combina com você"
+
+[node name="FeelingsGrid" type="GridContainer" parent="Content" unique_id=958178353]
+layout_mode = 2
+columns = 2
+
+[node name="FeelingsCard" parent="Content/FeelingsGrid" unique_id=2102539554 instance=ExtResource("1_lhfn3")]
+
+[node name="FeelingsCard2" parent="Content/FeelingsGrid" unique_id=1826258505 instance=ExtResource("1_lhfn3")]
+
+[node name="FeelingsCard3" parent="Content/FeelingsGrid" unique_id=1043509417 instance=ExtResource("1_lhfn3")]
+
+[node name="FeelingsCard4" parent="Content/FeelingsGrid" unique_id=752965268 instance=ExtResource("1_lhfn3")]
+
+[node name="FeelingsCard5" parent="Content/FeelingsGrid" unique_id=63003294 instance=ExtResource("1_lhfn3")]
+
+[node name="FeelingsCard6" parent="Content/FeelingsGrid" unique_id=1454300607 instance=ExtResource("1_lhfn3")]

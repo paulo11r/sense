@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/telas/Game.tscn")
+	get_tree().change_scene_to_file("res://cenas/telas/Feelings.tscn")
 
 
 func _on_accessibility_pressed() -> void:
