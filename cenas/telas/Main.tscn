@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://y4xd1l6j347i"]
+
+[node name="Main" type="Control" unique_id=764653963]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="ColorRect" parent="." unique_id=814607933]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Content" type="Control" parent="." unique_id=36109294]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScreenContainer" type="Control" parent="." unique_id=497806196]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

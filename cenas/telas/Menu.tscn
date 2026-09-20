@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bmmikc7l5sdkx"]
+
+[sub_resource type="Theme" id="Theme_q0i6t"]
+
+[node name="Menu" type="Control" unique_id=862536870]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background" type="ColorRect" parent="." unique_id=1426151168]
+propagate_maximum_size = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.002076, 1)
+color = Color(0.9607843, 0.972549, 0.9607843, 1)
+
+[node name="DecorativeElements" type="Control" parent="." unique_id=1383990272]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Content" type="Control" parent="." unique_id=583914692]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 300.0
+offset_bottom = 133.0
+
+[node name="Logo" type="Label" parent="Content" unique_id=1769570078]
+layout_mode = 0
+offset_right = 298.0
+offset_bottom = 23.0
+text = "sense"
+
+[node name="Subtitle" type="Label" parent="Content" unique_id=249573621]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 298.0
+offset_bottom = 50.0
+text = "Vamos descobrir como voçe está hoje?"
+
+[node name="Illustration" type="TextureRect" parent="Content" unique_id=513354613]
+layout_mode = 0
+offset_top = 54.0
+offset_right = 298.0
+offset_bottom = 54.0
+
+[node name="StartButton" type="Button" parent="Content" unique_id=30920437]
+layout_mode = 0
+offset_top = 58.0
+offset_right = 298.0
+offset_bottom = 89.0
+focus_mode = 3
+theme = SubResource("Theme_q0i6t")
+text = "COMEÇAR"
+
+[node name="AcessibilityButton" type="Button" parent="Content" unique_id=116800883]
+layout_mode = 0
+offset_top = 93.0
+offset_right = 298.0
+offset_bottom = 124.0
+text = "ACESSIBILIDADE"
+
+[node name="Spacer" type="Control" parent="Content" unique_id=742109226]
+anchors_preset = 0
+offset_top = 128.0
+offset_right = 298.0
+offset_bottom = 128.0
+
+[node name="FeelingsPreview" type="HBoxContainer" parent="Content" unique_id=2054846142]
+layout_mode = 0
+offset_top = 132.0
+offset_right = 298.0
+offset_bottom = 132.0
