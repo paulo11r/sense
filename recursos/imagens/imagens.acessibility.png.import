@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd4d8k7y5q885"
-path="res://.godot/imported/imagens_acessibility.jpg-405d9f101bde9d4237ac444c4b961828.ctex"
+uid="uid://1ilhbw4yhgpp"
+path="res://.godot/imported/imagens.acessibility.png-322f1950d690225048aa35a12915d8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/imagens/imagens_acessibility.jpg"
-dest_files=["res://.godot/imported/imagens_acessibility.jpg-405d9f101bde9d4237ac444c4b961828.ctex"]
+source_file="res://recursos/imagens/imagens.acessibility.png"
+dest_files=["res://.godot/imported/imagens.acessibility.png-322f1950d690225048aa35a12915d8fe.ctex"]
 
 [params]
 
