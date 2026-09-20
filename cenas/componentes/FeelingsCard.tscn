@@ -1,3 +1,49 @@
 [gd_scene format=3 uid="uid://bykcl4crlqfs6"]
 
-[node name="FeelingsCard" type="Node2D" unique_id=2102539554]
+[ext_resource type="Script" uid="uid://bihp4t8m5ue05" path="res://scripts/FeelingsCard.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://q3hgcqp2q56e" path="res://recursos/imagens/emojis/ChatGPT Image 20 de set. de 2026, 14_35_54.png" id="2_y3nvd"]
+
+[node name="FeelingsCard" type="Button" unique_id=752379415]
+custom_minimum_size = Vector2(280, 280)
+flat = true
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1378024723]
+layout_mode = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=1540123995]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="IconContainer" type="CenterContainer" parent="MarginContainer/Content" unique_id=1513672589]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Content/IconContainer" unique_id=696445821]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_y3nvd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="MarginContainer/Content" unique_id=1668020763]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "CALMO"
+horizontal_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/Content" unique_id=602797559]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "TRANQUILO E BEM"
+horizontal_alignment = 1
+autowrap_mode = 2

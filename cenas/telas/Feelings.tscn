@@ -1,8 +1,43 @@
 [gd_scene format=3 uid="uid://cp2ju6y3rvqcy"]
 
 [ext_resource type="PackedScene" uid="uid://bykcl4crlqfs6" path="res://cenas/componentes/FeelingsCard.tscn" id="1_lhfn3"]
+[ext_resource type="Texture2D" uid="uid://dpofc74vkfv4a" path="res://recursos/imagens/5093116.png" id="1_qw5pw"]
 [ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="1_t7drs"]
 [ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="2_qw5pw"]
+[ext_resource type="Texture2D" uid="uid://dhmrunc63svp5" path="res://recursos/imagens/Emojis/images (2).jpg" id="4_tkooj"]
+[ext_resource type="Texture2D" uid="uid://dboo1q1031w25" path="res://recursos/imagens/Emojis/images (3).jpg" id="5_4610y"]
+[ext_resource type="Texture2D" uid="uid://dimefgyr0qyo" path="res://recursos/imagens/Emojis/pngtree-sad-emoji-face-design-yellow-color-png-image_16723800.webp" id="6_j4s1e"]
+[ext_resource type="Texture2D" uid="uid://d4d03juu6t4u6" path="res://recursos/imagens/Emojis/1f922.webp" id="7_u4yqd"]
+[ext_resource type="Texture2D" uid="uid://b8imhv71lulqq" path="res://recursos/imagens/Emojis/1fae9.webp" id="8_33dsn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7drs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw5pw"]
+bg_color = Color(0.9098039, 0.88235295, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atxh7"]
+bg_color = Color(0.9529412, 0.9411765, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y6y6g"]
+load_path = "res://.godot/imported/ChatGPT Image 20 de set. de 2026, 14_35_54.png-63f63e7578ab61dd41837d34023f7c39.ctex"
 
 [node name="Feelings" type="Control" unique_id=969584554]
 layout_mode = 3
@@ -19,64 +54,135 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.7409237, 0.7789228, 0.96056706, 1)
+color = Color(0.9647059, 0.972549, 0.99607843, 1)
 
-[node name="Content" type="VBoxContainer" parent="." unique_id=2096732452]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1758560582]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 70
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
 
-[node name="Header" type="HBoxContainer" parent="Content" unique_id=1377349490]
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=2096732452]
 layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1377349490]
+layout_mode = 2
+theme_override_constants/separation = 15
 alignment = 1
 
-[node name="Title" type="Label" parent="Content/Header" unique_id=546178113]
+[node name="BackButton" type="Button" parent="MarginContainer/Content/Header" unique_id=357881719]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+icon = ExtResource("1_qw5pw")
+flat = true
+expand_icon = true
+
+[node name="Title" type="Label" parent="MarginContainer/Content/Header" unique_id=546178113]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 size_flags_stretch_ratio = 1.05
-theme_override_colors/font_color = Color(0.47843137, 0.4, 0.78431374, 1)
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
 theme_override_fonts/font = ExtResource("1_t7drs")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 56
 text = "Sentir e jogar"
 horizontal_alignment = 1
 
-[node name="BackButton" type="Button" parent="Content/Header" unique_id=357881719]
+[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header" unique_id=509292444]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.40392157, 0.3137255, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
+theme_override_colors/icon_pressed_color = Color(0.28627452, 0.20784314, 0.6509804, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_t7drs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qw5pw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atxh7")
+text = "♿"
+flat = true
 
-[node name="AccessibilityButton" type="Button" parent="Content/Header" unique_id=222469732]
+[node name="Subtitle" type="Label" parent="MarginContainer/Content" unique_id=1046966377]
 layout_mode = 2
-
-[node name="Subtitle" type="Label" parent="Content" unique_id=1046966377]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_qw5pw")
-theme_override_font_sizes/font_size = 39
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("1_t7drs")
+theme_override_font_sizes/font_size = 42
 text = "Como você está se sentindo agora?"
 horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Instruction" type="Label" parent="Content" unique_id=1579923900]
+[node name="FeelingsGrid" type="GridContainer" parent="MarginContainer/Content" unique_id=958178353]
 layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="FeelingsCard" parent="MarginContainer/Content/FeelingsGrid" unique_id=2102539554 instance=ExtResource("1_lhfn3")]
+layout_mode = 2
+
+[node name="Icon" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard/MarginContainer/Content/IconContainer" parent_id_path=PackedInt32Array(2102539554, 1513672589) index="0" unique_id=696445821]
+texture = SubResource("CompressedTexture2D_y6y6g")
+
+[node name="NameLabel" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard/MarginContainer/Content" parent_id_path=PackedInt32Array(2102539554, 1540123995) index="1" unique_id=1668020763]
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("1_t7drs")
+
+[node name="DescriptionLabel" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard/MarginContainer/Content" parent_id_path=PackedInt32Array(2102539554, 1540123995) index="2" unique_id=602797559]
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+
+[node name="FeelingsCard2" parent="MarginContainer/Content/FeelingsGrid" unique_id=1826258505 instance=ExtResource("1_lhfn3")]
+layout_mode = 2
+
+[node name="Icon" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard2/MarginContainer/Content/IconContainer" parent_id_path=PackedInt32Array(1826258505, 1513672589) index="0" unique_id=696445821]
+texture = ExtResource("4_tkooj")
+
+[node name="NameLabel" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard2/MarginContainer/Content" parent_id_path=PackedInt32Array(1826258505, 1540123995) index="1" unique_id=1668020763]
+text = "COM DOR"
+
+[node name="DescriptionLabel" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard2/MarginContainer/Content" parent_id_path=PackedInt32Array(1826258505, 1540123995) index="2" unique_id=602797559]
+text = "DÓI EM ALGUM LUGAR"
+
+[node name="FeelingsCard3" parent="MarginContainer/Content/FeelingsGrid" unique_id=1043509417 instance=ExtResource("1_lhfn3")]
+layout_mode = 2
+
+[node name="Icon" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard3/MarginContainer/Content/IconContainer" parent_id_path=PackedInt32Array(1043509417, 1513672589) index="0" unique_id=696445821]
+texture = ExtResource("5_4610y")
+
+[node name="FeelingsCard4" parent="MarginContainer/Content/FeelingsGrid" unique_id=752965268 instance=ExtResource("1_lhfn3")]
+layout_mode = 2
+
+[node name="Icon" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard4/MarginContainer/Content/IconContainer" parent_id_path=PackedInt32Array(752965268, 1513672589) index="0" unique_id=696445821]
+texture = ExtResource("6_j4s1e")
+
+[node name="FeelingsCard5" parent="MarginContainer/Content/FeelingsGrid" unique_id=63003294 instance=ExtResource("1_lhfn3")]
+layout_mode = 2
+
+[node name="Icon" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard5/MarginContainer/Content/IconContainer" parent_id_path=PackedInt32Array(63003294, 1513672589) index="0" unique_id=696445821]
+texture = ExtResource("7_u4yqd")
+
+[node name="FeelingsCard6" parent="MarginContainer/Content/FeelingsGrid" unique_id=1454300607 instance=ExtResource("1_lhfn3")]
+layout_mode = 2
+
+[node name="Icon" parent="MarginContainer/Content/FeelingsGrid/FeelingsCard6/MarginContainer/Content/IconContainer" parent_id_path=PackedInt32Array(1454300607, 1513672589) index="0" unique_id=696445821]
+texture = ExtResource("8_33dsn")
+
+[node name="Instruction" type="Label" parent="MarginContainer/Content" unique_id=1579923900]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45882353, 0.44313726, 0.5254902, 1)
 theme_override_fonts/font = ExtResource("2_qw5pw")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 30
 text = "Toque no que mais combina com você"
 horizontal_alignment = 1
 
-[node name="FeelingsGrid" type="GridContainer" parent="Content" unique_id=958178353]
-layout_mode = 2
-columns = 2
-
-[node name="FeelingsCard" parent="Content/FeelingsGrid" unique_id=2102539554 instance=ExtResource("1_lhfn3")]
-
-[node name="FeelingsCard2" parent="Content/FeelingsGrid" unique_id=1826258505 instance=ExtResource("1_lhfn3")]
-
-[node name="FeelingsCard3" parent="Content/FeelingsGrid" unique_id=1043509417 instance=ExtResource("1_lhfn3")]
-
-[node name="FeelingsCard4" parent="Content/FeelingsGrid" unique_id=752965268 instance=ExtResource("1_lhfn3")]
-
-[node name="FeelingsCard5" parent="Content/FeelingsGrid" unique_id=63003294 instance=ExtResource("1_lhfn3")]
-
-[node name="FeelingsCard6" parent="Content/FeelingsGrid" unique_id=1454300607 instance=ExtResource("1_lhfn3")]
+[editable path="MarginContainer/Content/FeelingsGrid/FeelingsCard"]
+[editable path="MarginContainer/Content/FeelingsGrid/FeelingsCard2"]
+[editable path="MarginContainer/Content/FeelingsGrid/FeelingsCard3"]
+[editable path="MarginContainer/Content/FeelingsGrid/FeelingsCard4"]
+[editable path="MarginContainer/Content/FeelingsGrid/FeelingsCard5"]
+[editable path="MarginContainer/Content/FeelingsGrid/FeelingsCard6"]
