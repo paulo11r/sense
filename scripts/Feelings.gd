@@ -1,11 +1,18 @@
-extends Node
+extends Control
 
+@onready var cards: Array[Node] = [
+	$MarginContainer/Content/FeelingsGrid/FeelingsCard,
+	$MarginContainer/Content/FeelingsGrid/FeelingsCard2,
+	$MarginContainer/Content/FeelingsGrid/FeelingsCard3,
+	$MarginContainer/Content/FeelingsGrid/FeelingsCard4,
+	$MarginContainer/Content/FeelingsGrid/FeelingsCard5,
+	$MarginContainer/Content/FeelingsGrid/FeelingsCard6,
+]
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	for card in cards:
+		card.feeling_selected.connect(_on_feeling_selected)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_feeling_selected(feeling_name: String) -> void:
+	GameState.selected_feeling = feeling_name
+	print("Sentimento selecionado: ", feeling_name)
