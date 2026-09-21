@@ -1,49 +1,47 @@
-[gd_scene format=3 uid="uid://bykcl4crlqfs6"]
+[gd_scene format=3 uid="uid://caw2ap1ewby3t"]
 
-[ext_resource type="Script" uid="uid://bihp4t8m5ue05" path="res://scripts/FeelingsCard.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://q3hgcqp2q56e" path="res://recursos/imagens/emojis/ChatGPT Image 20 de set. de 2026, 14_35_54.png" id="2_y3nvd"]
+[ext_resource type="Script" uid="uid://bvsl7inhddpot" path="res://scripts/Feelings_card.gd" id="1_8rbow"]
+[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="2_y3nvd"]
 
-[node name="FeelingsCard" type="Button" unique_id=752379415]
+[node name="FeelingsCard" type="Button" unique_id=71636295]
 custom_minimum_size = Vector2(280, 280)
-flat = true
-script = ExtResource("1_script")
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8rbow")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1378024723]
-layout_mode = 0
-mouse_filter = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1954785590]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=1540123995]
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=1120968421]
 layout_mode = 2
-mouse_filter = 2
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="IconContainer" type="CenterContainer" parent="MarginContainer/Content" unique_id=1513672589]
+[node name="IconContainer" type="CenterContainer" parent="MarginContainer/Content" unique_id=2126750079]
 custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
-mouse_filter = 2
 
-[node name="Icon" type="TextureRect" parent="MarginContainer/Content/IconContainer" unique_id=696445821]
+[node name="Icon" type="TextureRect" parent="MarginContainer/Content/IconContainer" unique_id=1855970457]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("2_y3nvd")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="NameLabel" type="Label" parent="MarginContainer/Content" unique_id=1668020763]
+[node name="NameLabel" type="Label" parent="MarginContainer/Content" unique_id=1095730472]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "CALMO"
+theme_override_fonts/font = ExtResource("2_y3nvd")
+theme_override_font_sizes/font_size = 36
 horizontal_alignment = 1
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/Content" unique_id=602797559]
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/Content" unique_id=1456908845]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "TRANQUILO E BEM"
+theme_override_fonts/font = ExtResource("2_y3nvd")
+theme_override_font_sizes/font_size = 36
 horizontal_alignment = 1
-autowrap_mode = 2

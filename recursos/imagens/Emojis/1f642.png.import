@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4d03juu6t4u6"
-path="res://.godot/imported/1f922.webp-46a2e85b45e0c073fe581beafafa738d.ctex"
+uid="uid://vrrjngqmdwkm"
+path="res://.godot/imported/1f642.png-bee8975c290ba27b1a0ec294a1dedeef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/imagens/Emojis/1f922.webp"
-dest_files=["res://.godot/imported/1f922.webp-46a2e85b45e0c073fe581beafafa738d.ctex"]
+source_file="res://recursos/imagens/Emojis/1f642.png"
+dest_files=["res://.godot/imported/1f642.png-bee8975c290ba27b1a0ec294a1dedeef.ctex"]
 
 [params]
 
