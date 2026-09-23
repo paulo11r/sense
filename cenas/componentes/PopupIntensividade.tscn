@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://bxuy0ylvobgv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i17p"]
+bg_color = Color(1, 0.69411767, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jvdu"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0i6t"]
+bg_color = Color(0.5686275, 0.3529412, 0.8235294, 1)
+
+[node name="PopupIntensividade" type="Control" unique_id=465802209]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FundoEscuro" type="ColorRect" parent="." unique_id=551669817]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="PainelPopup" type="PanelContainer" parent="." unique_id=1926905357]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2i17p")
+
+[node name="Margens" type="MarginContainer" parent="PainelPopup" unique_id=1543690519]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 45
+
+[node name="Conteudo" type="VBoxContainer" parent="PainelPopup/Margens" unique_id=998099104]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="BotaoVoltar" type="Button" parent="PainelPopup/Margens/Conteudo" unique_id=1515068021]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_3jvdu")
+text = "←"
+alignment = 0
+
+[node name="Titulo" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=105202043]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.15686275, 0.13725491, 0.19607843, 1)
+theme_override_font_sizes/font_size = 40
+text = "Intensidade do sentimento"
+horizontal_alignment = 1
+
+[node name="Pergunta" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=238559122]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.43529412, 1)
+theme_override_font_sizes/font_size = 25
+text = "Quanto você está sentindo?"
+horizontal_alignment = 1
+
+[node name="SliderIntensidade" type="HSlider" parent="PainelPopup/Margens/Conteudo" unique_id=1219447933]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 5.0
+
+[node name="Indicadores" type="HBoxContainer" parent="PainelPopup/Margens/Conteudo" unique_id=1837364171]
+layout_mode = 2
+
+[node name="TextoLeve" type="Label" parent="PainelPopup/Margens/Conteudo/Indicadores" unique_id=1056353056]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Leve"
+
+[node name="Espacador1" type="Control" parent="PainelPopup/Margens/Conteudo/Indicadores" unique_id=1336935538]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextoModerado" type="Label" parent="PainelPopup/Margens/Conteudo/Indicadores" unique_id=330145833]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Moderado"
+
+[node name="Espacador2" type="Control" parent="PainelPopup/Margens/Conteudo/Indicadores" unique_id=921422518]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextoIntenso" type="Label" parent="PainelPopup/Margens/Conteudo/Indicadores" unique_id=902331364]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "intenso"
+
+[node name="ValorIntensidade" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=84875550]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "5/10"
+horizontal_alignment = 1
+
+[node name="DescricaoIntensidade" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=472863457]
+visible = false
+layout_mode = 2
+text = "Moderado"
+
+[node name="AreaConfirmar" type="CenterContainer" parent="PainelPopup/Margens/Conteudo" unique_id=1356769666]
+layout_mode = 2
+
+[node name="BotaoConfirmar" type="Button" parent="PainelPopup/Margens/Conteudo/AreaConfirmar" unique_id=1239242993]
+custom_minimum_size = Vector2(260, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0i6t")
+text = "Confimar"
