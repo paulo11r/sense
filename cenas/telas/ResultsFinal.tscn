@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://byow5od2idojq"]
+
+[ext_resource type="Script" uid="uid://dytxjd7vqbgcd" path="res://scripts/ResultFinal.gd" id="1_xiwro"]
+[ext_resource type="Texture2D" uid="uid://dpofc74vkfv4a" path="res://recursos/imagens/5093116.png" id="2_d3hi8"]
+[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="3_pnmxw"]
+[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="11_5kbm4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7drs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw5pw"]
+bg_color = Color(0.9098039, 0.88235295, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atxh7"]
+bg_color = Color(0.9529412, 0.9411765, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiwro"]
+content_margin_left = 24.0
+content_margin_top = 32.0
+content_margin_right = 24.0
+content_margin_bottom = 32.0
+bg_color = Color(0.9019608, 0.94509804, 0.9882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16078432, 0.4, 0.7490196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oom3t"]
+bg_color = Color(0.8392157, 0.89411765, 0.9607843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uxpv"]
+bg_color = Color(0.1764706, 0.5568628, 0.68235296, 1)
+
+[node name="ResultsFinal" type="Control" unique_id=969584554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xiwro")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=905110839]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9647059, 0.972549, 0.99607843, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1758560582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=2096732452]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1377349490]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/Content/Header" unique_id=357881719]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("2_d3hi8")
+flat = true
+expand_icon = true
+
+[node name="Title" type="Label" parent="MarginContainer/Content/Header" unique_id=546178113]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.05
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("3_pnmxw")
+theme_override_font_sizes/font_size = 56
+text = "Sentir e jogar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header" unique_id=509292444]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.40392157, 0.3137255, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
+theme_override_colors/icon_pressed_color = Color(0.28627452, 0.20784314, 0.6509804, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_t7drs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qw5pw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atxh7")
+text = "♿"
+flat = true
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Content" unique_id=1046966377]
+custom_minimum_size = Vector2(60, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("3_pnmxw")
+theme_override_font_sizes/font_size = 57
+text = "Tudo bem sentir isso.
+Você não precisa esconder o que está sentindo."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ResultCard" type="PanelContainer" parent="MarginContainer/Content" unique_id=470905401]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xiwro")
+
+[node name="CardContent" type="VBoxContainer" parent="MarginContainer/Content/ResultCard" unique_id=385082465]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="Emoji Label" type="Label" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1319624446]
+layout_mode = 2
+theme_override_font_sizes/font_size = 118
+text = "😊"
+horizontal_alignment = 1
+
+[node name="NomeLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=586981737]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("3_pnmxw")
+theme_override_font_sizes/font_size = 80
+text = "Triste"
+horizontal_alignment = 1
+
+[node name="DescricaoLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=533499327]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_pnmxw")
+theme_override_font_sizes/font_size = 50
+text = "Vontade de chorar"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1531791581]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oom3t")
+
+[node name="TagLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent/PanelContainer" unique_id=522955198]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_pnmxw")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_8uxpv")
+text = "Você escolheu esse sentimento"
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="MarginContainer/Content" unique_id=1579923900]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45882353, 0.44313726, 0.5254902, 1)
+theme_override_fonts/font = ExtResource("11_5kbm4")
+theme_override_font_sizes/font_size = 30
+text = "Toque no que mais combina com você"
+horizontal_alignment = 1

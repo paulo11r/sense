@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xpepb0a6bl7c"]
+
+[node name="IntensityPopup" type="Control" unique_id=988718153]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1565555699]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
