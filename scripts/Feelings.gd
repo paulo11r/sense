@@ -13,8 +13,10 @@ func _ready() -> void:
 	for card in cards:
 		card.feeling_selected.connect(_on_feeling_selected)
 
-func _on_feeling_selected(feeling_name: String, description: String, icon: Texture2D) -> void:
+func _on_feeling_selected(feeling_name: String, description: String, icon: Texture2D, bg_color: Color, border_color: Color) -> void:
 	GameState.selected_feeling = feeling_name
 	GameState.selected_description = description
 	GameState.selected_icon = icon
+	GameState.selected_bg_color = bg_color
+	GameState.selected_border_color = border_color
 	print("Sentimento selecionado: ", feeling_name)
