@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://bgf5iwd2ycvhh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0i6t"]
+bg_color = Color(0.95686275, 0.93333334, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s673n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfyvf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrdyf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mr6s6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i17p"]
+bg_color = Color(0.9607843, 0.93333334, 1, 1)
+expand_margin_left = 18.0
+expand_margin_top = 18.0
+expand_margin_right = 18.0
+expand_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jvdu"]
+bg_color = Color(0.95686275, 0.93333334, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faqc1"]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.8509804, 0.8235294, 0.8901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1lqx"]
+bg_color = Color(0.35686275, 0.16470589, 0.5254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2cue"]
+bg_color = Color(0.4392157, 0.2509804, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v804h"]
+bg_color = Color(0, 0.654902, 1, 1)
+
+[node name="PopupAcessibilidade" type="Control" unique_id=648062252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FundoEscuro" type="ColorRect" parent="." unique_id=1977750279]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="Centralizador" type="CenterContainer" parent="." unique_id=257706326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="PanelContainer" parent="Centralizador" unique_id=1094845199]
+custom_minimum_size = Vector2(430, 590)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0i6t")
+
+[node name="Margens" type="MarginContainer" parent="Centralizador/Card" unique_id=1097199225]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 28
+
+[node name="AreaPopup" type="Control" parent="Centralizador/Card/Margens" unique_id=1813737107]
+layout_mode = 2
+
+[node name="BotaoFechar" type="Button" parent="Centralizador/Card/Margens/AreaPopup" unique_id=50384377]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0.37254903, 0.33333334, 0.4392157, 1)
+theme_override_colors/font_pressed_color = Color(0.4862745, 0.41568628, 0.5882353, 1)
+theme_override_colors/font_hover_color = Color(0.20784314, 0.1764706, 0.27058825, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s673n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wfyvf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wrdyf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mr6s6")
+text = "×"
+
+[node name="Conteudo" type="VBoxContainer" parent="Centralizador/Card/Margens" unique_id=130281387]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Cabecalho" type="VBoxContainer" parent="Centralizador/Card/Margens/Conteudo" unique_id=782693798]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Icone" type="Label" parent="Centralizador/Card/Margens/Conteudo/Cabecalho" unique_id=49175294]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "⚙️"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Titulo" type="Label" parent="Centralizador/Card/Margens/Conteudo/Cabecalho" unique_id=1756086823]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Configurações"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="Centralizador/Card/Margens/Conteudo/Cabecalho" unique_id=968380706]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Personalize sua experiência"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardAudio" type="PanelContainer" parent="Centralizador/Card/Margens/Conteudo" unique_id=1428068989]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2i17p")
+
+[node name="MargemAudio" type="MarginContainer" parent="Centralizador/Card/Margens/Conteudo/CardAudio" unique_id=535838551]
+layout_mode = 2
+
+[node name="LinhaAudio" type="HBoxContainer" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio" unique_id=1824197456]
+layout_mode = 2
+
+[node name="IconeAudio" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio/LinhaAudio" unique_id=1129743671]
+layout_mode = 2
+text = "🔊"
+
+[node name="TextosAudio" type="VBoxContainer" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio/LinhaAudio" unique_id=1679657452]
+layout_mode = 2
+
+[node name="TituloAudio" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio/LinhaAudio/TextosAudio" unique_id=2054313752]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+text = "Áudio Ativo"
+
+[node name="DescricaoAudio" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio/LinhaAudio/TextosAudio" unique_id=1082601252]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4509804, 0.4627451, 0.5411765, 1)
+text = "Sons e efeitos"
+
+[node name="EspacadorAudio" type="Control" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio/LinhaAudio" unique_id=108381699]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BotaoAudio" type="CheckButton" parent="Centralizador/Card/Margens/Conteudo/CardAudio/MargemAudio/LinhaAudio" unique_id=1785126117]
+layout_mode = 2
+
+[node name="CardVoz" type="PanelContainer" parent="Centralizador/Card/Margens/Conteudo" unique_id=1679970029]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2i17p")
+
+[node name="MargemVoz" type="MarginContainer" parent="Centralizador/Card/Margens/Conteudo/CardVoz" unique_id=2012777222]
+layout_mode = 2
+
+[node name="LinhaVoz" type="HBoxContainer" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz" unique_id=1700069178]
+layout_mode = 2
+
+[node name="IconeVoz" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz/LinhaVoz" unique_id=90492792]
+layout_mode = 2
+text = "🗣️"
+
+[node name="TextosVoz" type="VBoxContainer" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz/LinhaVoz" unique_id=2065333818]
+layout_mode = 2
+
+[node name="TituloVoz" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz/LinhaVoz/TextosVoz" unique_id=1124375685]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+text = "Voz Guiada"
+
+[node name="DescricaoVoz" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz/LinhaVoz/TextosVoz" unique_id=2111941791]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4509804, 0.4627451, 0.5411765, 1)
+text = "Leitura de tela"
+
+[node name="EspacadorVoz" type="Control" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz/LinhaVoz" unique_id=1187802366]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BotaoVoz" type="CheckButton" parent="Centralizador/Card/Margens/Conteudo/CardVoz/MargemVoz/LinhaVoz" unique_id=1189477089]
+layout_mode = 2
+
+[node name="CardVolume" type="PanelContainer" parent="Centralizador/Card/Margens/Conteudo" unique_id=1887375847]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3jvdu")
+
+[node name="MargemVolume" type="MarginContainer" parent="Centralizador/Card/Margens/Conteudo/CardVolume" unique_id=1937735192]
+layout_mode = 2
+
+[node name="ConteudoVolume" type="VBoxContainer" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume" unique_id=1108176107]
+layout_mode = 2
+
+[node name="LinhaVolume" type="HBoxContainer" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume" unique_id=91149809]
+layout_mode = 2
+
+[node name="IconeVolume" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume/LinhaVolume" unique_id=1230314024]
+layout_mode = 2
+text = "📊"
+
+[node name="TituloVolume" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume/LinhaVolume" unique_id=265516326]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+text = "Volume"
+
+[node name="EspacadorVolume" type="Control" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume/LinhaVolume" unique_id=130510907]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ValorVolume" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume/LinhaVolume" unique_id=1581614257]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+text = "70%"
+
+[node name="HSlider" type="HSlider" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume" unique_id=276081547]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_faqc1")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_p1lqx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_y2cue")
+value = 70.0
+
+[node name="BotaoRepetir" type="Button" parent="Centralizador/Card/Margens" unique_id=24327778]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_v804h")
+text = "🔁 Repetir Instrução"
