@@ -19,4 +19,5 @@ func _on_feeling_selected(feeling_name: String, description: String, icon: Textu
 	GameState.selected_icon = icon
 	GameState.selected_bg_color = bg_color
 	GameState.selected_border_color = border_color
-	print("Sentimento selecionado: ", feeling_name)
+	App.load_screen("res://cenas/telas/IntensityPopup.tscn")
+	

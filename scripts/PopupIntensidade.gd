@@ -25,4 +25,6 @@ func _update_display(value: float) -> void:
 
 func _on_confirmar_pressed() -> void:
 	GameState.selected_intensity = str(int(slider.value))
+	App.load_screen("res://cenas/telas/ResultsFinal.tscn")
+	
 	

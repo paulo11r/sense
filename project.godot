@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="sense"
+run/main_scene="uid://y4xd1l6j347i"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameState="*uid://cunr1wb0gwei8"
+App="*uid://y4xd1l6j347i"
 
 [display]
 

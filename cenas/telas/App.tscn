@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://y4xd1l6j347i"]
+
+[ext_resource type="Script" uid="uid://m5nqrkqq7b6x" path="res://scripts/App.gd" id="1_xdkgd"]
+
+[node name="App" type="Control" unique_id=764653963]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdkgd")
+
+[node name="Background" type="ColorRect" parent="." unique_id=814607933]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="Control" parent="." unique_id=36109294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScreenContainer" type="Control" parent="." unique_id=497806196]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
