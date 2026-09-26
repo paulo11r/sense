@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://6wdkixsoqdud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0i6t"]
+bg_color = Color(0.972549, 0.95686275, 1, 1)
+border_width_left = 24
+border_width_top = 24
+border_width_right = 24
+border_width_bottom = 24
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jvdu"]
+bg_color = Color(0.972549, 0.95686275, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7254902, 0.6509804, 0.827451, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05i11"]
+bg_color = Color(0.8862745, 0.8352941, 0.9490196, 1)
+border_color = Color(0.43529412, 0.29411766, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v804h"]
+bg_color = Color(0.93333334, 0.8980392, 0.98039216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.54509807, 0.42352942, 0.6862745, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hjrv"]
+bg_color = Color(0.94509804, 0.93333334, 0.9607843, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.84705883, 0.8156863, 0.88235295, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i17p"]
+bg_color = Color(0.25490198, 0.4117647, 0.88235295, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="PopupConfirmacao" type="Control" unique_id=73685781]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FundoEscuro" type="ColorRect" parent="." unique_id=1146584940]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="Centralizador" type="CenterContainer" parent="." unique_id=1628081001]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardConfirmacao" type="PanelContainer" parent="Centralizador" unique_id=631769175]
+custom_minimum_size = Vector2(520, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0i6t")
+
+[node name="Margens" type="MarginContainer" parent="Centralizador/CardConfirmacao" unique_id=122009828]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Conteudo" type="VBoxContainer" parent="Centralizador/CardConfirmacao/Margens" unique_id=1488373296]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Icone" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=1274773889]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.5529412, 0.15686275, 1)
+theme_override_font_sizes/font_size = 40
+text = "✓"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Titulo" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=453196585]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+theme_override_font_sizes/font_size = 30
+text = "Confirmar seleção"
+horizontal_alignment = 1
+
+[node name="Espacador2" type="Control" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=593289876]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Mensagem" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=516038955]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.28235295, 0.5411765, 1)
+theme_override_font_sizes/font_size = 30
+text = "Você selecionou:"
+horizontal_alignment = 1
+
+[node name="selecao" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=1385870735]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35686275, 0.16470589, 0.5254902, 1)
+theme_override_font_sizes/font_size = 30
+text = "Feliz"
+horizontal_alignment = 1
+
+[node name="EmojiSelecao" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=1707486625]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "😊"
+horizontal_alignment = 1
+
+[node name="Espacador" type="Control" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=426211899]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="botoes" type="HBoxContainer" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=1267535688]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BotaoAlterar" type="Button" parent="Centralizador/CardConfirmacao/Margens/Conteudo/botoes" unique_id=1677106401]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.39607844, 0.27058825, 0.54509807, 1)
+theme_override_colors/font_pressed_color = Color(0.2784314, 0.16862746, 0.40392157, 1)
+theme_override_colors/font_hover_color = Color(0.32941177, 0.20784314, 0.45882353, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3jvdu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_05i11")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v804h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_5hjrv")
+text = "← Voltar e alterar"
+
+[node name="BotaoConfirmar" type="Button" parent="Centralizador/CardConfirmacao/Margens/Conteudo/botoes" unique_id=1268683328]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_2i17p")
+text = "Confirmar"

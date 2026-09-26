@@ -16,4 +16,6 @@ func _ready() -> void:
 func _on_location_selected(feeling_name: String, description: String, icon: Texture2D, bg_color: Color, border_color: Color) -> void:
 	GameState.pain_location = feeling_name
 	GameState.pain_description = description
-	App.load_screen("res://cenas/telas/IntensityPopup.tscn")
+	
+	var app := get_parent().get_parent()
+	app.load_screen("res://cenas/telas/IntensityPopup.tscn")

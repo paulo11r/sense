@@ -24,7 +24,9 @@ func _update_display(value: float) -> void:
 		descricao_label.text = "Intenso"
 
 func _on_confirmar_pressed() -> void:
-	GameState.selected_intensity = str(int(slider.value))
-	App.load_screen("res://cenas/telas/ResultsFinal.tscn")
+	GameState.selected_intensity = str(int(slider.value))                        
+	
+	var app := get_parent().get_parent()
+	app.load_screen("res://cenas/telas/ResultsFinal.tscn")
 	
 	

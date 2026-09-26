@@ -58,12 +58,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.002076, 1)
+mouse_filter = 2
 color = Color(0.972549, 0.96862745, 1, 1)
 
 [node name="DecorativeElements" type="Control" parent="." unique_id=1383990272]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="SafeArea" type="MarginContainer" parent="." unique_id=1379067268]
 layout_mode = 1

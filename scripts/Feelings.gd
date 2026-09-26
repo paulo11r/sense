@@ -20,7 +20,9 @@ func _on_feeling_selected(feeling_name: String, description: String, icon: Textu
 	GameState.selected_bg_color = bg_color
 	GameState.selected_border_color = border_color
 
+	var app := get_parent().get_parent()
+
 	if feeling_name == "Com Dor":
-		App.load_screen("res://cenas/telas/PainLocation.tscn")
+		app.load_screen("res://cenas/telas/PainLocation.tscn")
 	else:
-		App.load_screen("res://cenas/telas/IntensityPopup.tscn")
+		app.load_screen("res://cenas/telas/IntensityPopup.tscn")
