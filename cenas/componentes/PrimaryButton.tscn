@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://bjr23rt1xni6r"]
 
-[node name="PrimaryButton" type="Node2D" unique_id=414143956]
+[ext_resource type="Script" uid="uid://edebdett2vud" path="res://scripts/primary_button.gd" id="1_2w011"]
+
+[node name="PrimaryButton" type="Button" unique_id=1368293844]
+script = ExtResource("1_2w011")

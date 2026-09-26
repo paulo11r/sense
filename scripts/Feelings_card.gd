@@ -30,7 +30,7 @@ extends Button
 		if is_node_ready():
 			_update_style()
 
-signal feeling_selected(feeling_name: String)
+signal feeling_selected(feeling_name: String, description: String, icon: Texture2D)
 
 func _ready() -> void:
 	_update_display()
@@ -64,4 +64,4 @@ func _update_style() -> void:
 	$MarginContainer/Content/DescriptionLabel.add_theme_color_override("font_color", Color(0.45, 0.45, 0.48))
 
 func _on_pressed() -> void:
-	feeling_selected.emit(feeling_name)
+	feeling_selected.emit(feeling_name,feeling_description, feeling_icon)
