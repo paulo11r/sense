@@ -7,6 +7,7 @@ var selected_bg_color: Color = Color.WHITE
 var selected_border_color: Color = Color.BLACK
 var selected_intensity: String = ""
 var pain_location: String = ""
+var pain_description: String = ""
 
 func reset() -> void:
 	selected_feeling = ""
@@ -16,3 +17,4 @@ func reset() -> void:
 	selected_border_color = Color.BLACK
 	selected_intensity = ""
 	pain_location = ""
+	pain_description = ""

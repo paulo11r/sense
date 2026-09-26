@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://c2th16qwhocuo"]
+
+[ext_resource type="Script" uid="uid://dltjdeb1eo78u" path="res://scripts/pain_location.gd" id="1_yp22t"]
+[ext_resource type="Texture2D" uid="uid://dpofc74vkfv4a" path="res://recursos/imagens/5093116.png" id="2_0w0m3"]
+[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="3_axrea"]
+[ext_resource type="PackedScene" uid="uid://caw2ap1ewby3t" path="res://cenas/componentes/FeelingsCard.tscn" id="4_do4oc"]
+[ext_resource type="Texture2D" uid="uid://c55cyaov37hcf" path="res://recursos/imagens/Emojis/1f915.png" id="6_eptdi"]
+[ext_resource type="Texture2D" uid="uid://cv3kmpbe37srp" path="res://recursos/imagens/Emojis/1fac1.png" id="7_6dv52"]
+[ext_resource type="Texture2D" uid="uid://7ugq6n2lpeyq" path="res://recursos/imagens/Emojis/1f4aa.png" id="8_6dv52"]
+[ext_resource type="Texture2D" uid="uid://cuagqwmhupsd3" path="res://recursos/imagens/Emojis/1f922.png" id="9_hen7a"]
+[ext_resource type="Texture2D" uid="uid://bped5j5v3vjqo" path="res://recursos/imagens/Emojis/1f9b5.png" id="9_yp22t"]
+[ext_resource type="Texture2D" uid="uid://c4adi0t2tcedu" path="res://recursos/imagens/Emojis/1f5e3.png" id="10_yp22t"]
+[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="11_p71eu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7drs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw5pw"]
+bg_color = Color(0.9098039, 0.88235295, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atxh7"]
+bg_color = Color(0.9529412, 0.9411765, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[node name="Feelings" type="Control" unique_id=969584554]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yp22t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=905110839]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9647059, 0.972549, 0.99607843, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1758560582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=2096732452]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1377349490]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/Content/Header" unique_id=357881719]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("2_0w0m3")
+flat = true
+expand_icon = true
+
+[node name="Title" type="Label" parent="MarginContainer/Content/Header" unique_id=546178113]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.05
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("3_axrea")
+theme_override_font_sizes/font_size = 56
+text = "Sentir e jogar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header" unique_id=509292444]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.40392157, 0.3137255, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
+theme_override_colors/icon_pressed_color = Color(0.28627452, 0.20784314, 0.6509804, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_t7drs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qw5pw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atxh7")
+text = "♿"
+flat = true
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Content" unique_id=1046966377]
+custom_minimum_size = Vector2(60, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("3_axrea")
+theme_override_font_sizes/font_size = 57
+text = "Mostre onde você está sentindo."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="FeelingsGrid" type="GridContainer" parent="MarginContainer/Content" unique_id=958178353]
+custom_maximum_size = Vector2(1000, 1500)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="FeelingsCard" parent="MarginContainer/Content/FeelingsGrid" unique_id=71636295 instance=ExtResource("4_do4oc")]
+layout_mode = 2
+feeling_name = "CABEÇA"
+feeling_description = "Dói de cabeça"
+feeling_icon = ExtResource("6_eptdi")
+card_color = Color(0.9882353, 0.9098039, 0.9098039, 1)
+accent_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+
+[node name="FeelingsCard2" parent="MarginContainer/Content/FeelingsGrid" unique_id=1512685285 instance=ExtResource("4_do4oc")]
+layout_mode = 2
+feeling_name = "BARRIGA"
+feeling_description = "Dor de barriga"
+feeling_icon = ExtResource("9_hen7a")
+card_color = Color(0.9882353, 0.91764706, 0.91764706, 1)
+accent_color = Color(0.7490196, 0.14901961, 0.14901961, 1)
+
+[node name="FeelingsCard3" parent="MarginContainer/Content/FeelingsGrid" unique_id=1879009879 instance=ExtResource("4_do4oc")]
+layout_mode = 2
+feeling_name = "PEITO"
+feeling_description = "Aperto no peito"
+feeling_icon = ExtResource("7_6dv52")
+card_color = Color(0.9882353, 0.9098039, 0.9098039, 1)
+accent_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+
+[node name="FeelingsCard4" parent="MarginContainer/Content/FeelingsGrid" unique_id=236262717 instance=ExtResource("4_do4oc")]
+layout_mode = 2
+feeling_name = "BRAÇO"
+feeling_description = "Dor no Braço"
+feeling_icon = ExtResource("8_6dv52")
+card_color = Color(0.9882353, 0.9098039, 0.9098039, 1)
+accent_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+
+[node name="FeelingsCard5" parent="MarginContainer/Content/FeelingsGrid" unique_id=64177602 instance=ExtResource("4_do4oc")]
+layout_mode = 2
+feeling_name = "PERNA"
+feeling_description = "Dor na perna"
+feeling_icon = ExtResource("9_yp22t")
+card_color = Color(0.9882353, 0.9098039, 0.9098039, 1)
+accent_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+
+[node name="FeelingsCard6" parent="MarginContainer/Content/FeelingsGrid" unique_id=1492459429 instance=ExtResource("4_do4oc")]
+layout_mode = 2
+feeling_name = "GARGANTA"
+feeling_description = "Dor ao engolir"
+feeling_icon = ExtResource("10_yp22t")
+card_color = Color(0.9882353, 0.9098039, 0.9098039, 1)
+accent_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+
+[node name="Instruction" type="Label" parent="MarginContainer/Content" unique_id=1579923900]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45882353, 0.44313726, 0.5254902, 1)
+theme_override_fonts/font = ExtResource("11_p71eu")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
