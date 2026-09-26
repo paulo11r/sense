@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bxuy0ylvobgv"]
 
+[ext_resource type="Script" uid="uid://bthcy4y3h2n8m" path="res://scripts/PopupIntensidade.gd" id="1_hb6yg"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i17p"]
 bg_color = Color(1, 0.69411767, 1, 1)
 
@@ -16,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hb6yg")
 
 [node name="FundoEscuro" type="ColorRect" parent="." unique_id=551669817]
 layout_mode = 1
