@@ -1,10 +1,8 @@
 # Sentir & Jogar
 
-![Godot Engine](https://img.shields.io/badge/Godot_Engine-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
-![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=godot,figma,git,github" alt="Godot, Figma, Git, GitHub" />
+</p>
 
 Projeto acadêmico (A3) desenvolvido no Centro Universitário UniFG (Guanambi), a partir de uma proposta do curso de Enfermagem voltada ao atendimento e à interação com crianças em UBS (Unidades Básicas de Saúde), incluindo situações envolvendo crianças neurodivergentes ou com dificuldades de comunicação.
 
@@ -21,5 +19,5 @@ O Sentir & Jogar é a nossa interpretação desse desafio: uma experiência inte
 
 ## Colaboradores
 
-- Paulo Henrique
-- Gabriel Amanhã Reis
+- Gabriel Normanha Reis
+- Paulo Henrique de Souza Rocha
