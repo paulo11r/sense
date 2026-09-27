@@ -118,6 +118,11 @@ theme_override_font_sizes/font_size = 30
 text = "5/10"
 horizontal_alignment = 1
 
+[node name="DescricaoIntensidade" type="Label" parent="PainelPopup/Margens/Conteudo/ValorIntensidade" unique_id=1298811850]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="AreaConfirmar" type="CenterContainer" parent="PainelPopup/Margens/Conteudo" unique_id=1356769666]
 layout_mode = 2
 

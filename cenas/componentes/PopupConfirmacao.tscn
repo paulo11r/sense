@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://6wdkixsoqdud"]
 
+[ext_resource type="Script" uid="uid://bxppcxp0x6o5u" path="res://scripts/popup_confirmacao.gd" id="1_iqtgw"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0i6t"]
 bg_color = Color(0.972549, 0.95686275, 1, 1)
 border_width_left = 24
@@ -62,6 +64,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iqtgw")
 
 [node name="FundoEscuro" type="ColorRect" parent="." unique_id=1146584940]
 layout_mode = 0
@@ -126,11 +129,10 @@ theme_override_font_sizes/font_size = 30
 text = "Feliz"
 horizontal_alignment = 1
 
-[node name="EmojiSelecao" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=1707486625]
+[node name="EmojiSelecao" type="TextureRect" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=183103466]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
-text = "😊"
-horizontal_alignment = 1
+stretch_mode = 5
 
 [node name="Espacador" type="Control" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=426211899]
 custom_minimum_size = Vector2(0, 20)

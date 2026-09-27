@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dltjdeb1eo78u" path="res://scripts/pain_location.gd" id="1_yp22t"]
 [ext_resource type="Texture2D" uid="uid://dpofc74vkfv4a" path="res://recursos/imagens/5093116.png" id="2_0w0m3"]
 [ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="3_axrea"]
-[ext_resource type="PackedScene" uid="uid://caw2ap1ewby3t" path="res://cenas/componentes/FeelingsCard.tscn" id="4_do4oc"]
+[ext_resource type="PackedScene" uid="uid://bykcl4crlqfs6" path="res://cenas/componentes/FeelingsCard.tscn" id="4_do4oc"]
 [ext_resource type="Texture2D" uid="uid://c55cyaov37hcf" path="res://recursos/imagens/Emojis/1f915.png" id="6_eptdi"]
 [ext_resource type="Texture2D" uid="uid://cv3kmpbe37srp" path="res://recursos/imagens/Emojis/1fac1.png" id="7_6dv52"]
 [ext_resource type="Texture2D" uid="uid://7ugq6n2lpeyq" path="res://recursos/imagens/Emojis/1f4aa.png" id="8_6dv52"]
@@ -38,7 +38,7 @@ corner_radius_bottom_left = 24
 shadow_size = 8
 shadow_offset = Vector2(0, 4)
 
-[node name="Feelings" type="Control" unique_id=969584554]
+[node name="PainLocation" type="Control" unique_id=969584554]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -182,3 +182,5 @@ theme_override_colors/font_color = Color(0.45882353, 0.44313726, 0.5254902, 1)
 theme_override_fonts/font = ExtResource("11_p71eu")
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/Content/Header/AcessibilityButton" to="." method="_on_accessibility_pressed"]

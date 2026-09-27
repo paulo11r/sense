@@ -154,11 +154,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_xiwro")
 layout_mode = 2
 theme_override_constants/separation = 26
 
-[node name="Emoji Label" type="Label" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1319624446]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1872160242]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
-theme_override_font_sizes/font_size = 145
-text = "😭"
-horizontal_alignment = 1
+expand_mode = 1
+stretch_mode = 5
 
 [node name="NomeLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=586981737]
 layout_mode = 2
@@ -231,3 +231,5 @@ theme_override_fonts/font = ExtResource("11_5kbm4")
 theme_override_font_sizes/font_size = 38
 text = "Ouça novamente ou tente escolher outro sentimento"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/Content/Header/AcessibilityButton" to="." method="_on_accessibility_pressed"]
