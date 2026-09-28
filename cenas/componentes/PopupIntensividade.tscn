@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bxuy0ylvobgv"]
 
 [ext_resource type="Script" uid="uid://bthcy4y3h2n8m" path="res://scripts/PopupIntensidade.gd" id="1_hb6yg"]
+[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="2_iac1l"]
+[ext_resource type="FontFile" uid="uid://doai2d4vwddkw" path="res://fontes/Fredoka-Regular.ttf" id="3_apucm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i17p"]
 bg_color = Color(1, 0.69411767, 1, 1)
@@ -68,6 +70,7 @@ alignment = 0
 [node name="Titulo" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=105202043]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.15686275, 0.13725491, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("2_iac1l")
 theme_override_font_sizes/font_size = 40
 text = "Intensidade do sentimento"
 horizontal_alignment = 1
@@ -75,7 +78,8 @@ horizontal_alignment = 1
 [node name="Pergunta" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=238559122]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0.43529412, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("3_apucm")
+theme_override_font_sizes/font_size = 32
 text = "Quanto você está sentindo?"
 horizontal_alignment = 1
 
@@ -114,7 +118,8 @@ text = "intenso"
 
 [node name="ValorIntensidade" type="Label" parent="PainelPopup/Margens/Conteudo" unique_id=84875550]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_iac1l")
+theme_override_font_sizes/font_size = 50
 text = "5/10"
 horizontal_alignment = 1
 

@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b2wl2k1lfkrmh" path="res://scripts/Menu.gd" id="1_mr041"]
 [ext_resource type="Texture2D" uid="uid://1ilhbw4yhgpp" path="res://recursos/imagens/imagens.acessibility.png" id="1_um1n5"]
+[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="2_l41uw"]
+[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="3_q10tu"]
+[ext_resource type="FontFile" uid="uid://doai2d4vwddkw" path="res://fontes/Fredoka-Regular.ttf" id="4_gctk7"]
 
 [sub_resource type="Theme" id="Theme_2i17p"]
 
@@ -96,6 +99,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
+theme_override_fonts/font = ExtResource("2_l41uw")
 theme_override_font_sizes/font_size = 100
 text = "SENSE"
 horizontal_alignment = 1
@@ -122,6 +126,7 @@ flat = true
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1882353, 0.15686275, 0.37254903, 1)
+theme_override_fonts/font = ExtResource("3_q10tu")
 theme_override_font_sizes/font_size = 55
 text = "Pequenos passos,
 mais bem-estar."
@@ -145,6 +150,7 @@ size_flags_horizontal = 3
 [node name="Question" type="Label" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=2012105958]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1882353, 0.15686275, 0.37254903, 1)
+theme_override_fonts/font = ExtResource("4_gctk7")
 theme_override_font_sizes/font_size = 60
 text = "Vamos descobrir
 como você está
@@ -153,6 +159,7 @@ se sentindo hoje?"
 [node name="Label" type="Label" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=460065713]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.09411765, 0.37254903, 1)
+theme_override_fonts/font = ExtResource("4_gctk7")
 theme_override_font_sizes/font_size = 45
 text = "Aqui é um espaço seguro
 para você se ouvir."
@@ -164,6 +171,7 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=1939076010]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_l41uw")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_q0i6t")
 text = "INICIAR "
@@ -192,7 +200,8 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_q10tu")
+theme_override_font_sizes/font_size = 51
 text = "Como você está se sentindo?"
 horizontal_alignment = 1
 

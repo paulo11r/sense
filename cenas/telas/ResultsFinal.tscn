@@ -48,6 +48,10 @@ bg_color = Color(0.8392157, 0.89411765, 0.9607843, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uxpv"]
 bg_color = Color(0.1764706, 0.5568628, 0.68235296, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdm2o"]
 bg_color = Color(0.35686275, 0.60784316, 0.8352941, 1)
@@ -189,10 +193,13 @@ horizontal_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1531791581]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_oom3t")
 
 [node name="TagLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent/PanelContainer" unique_id=522955198]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_pnmxw")
 theme_override_font_sizes/font_size = 49
 theme_override_styles/normal = SubResource("StyleBoxFlat_8uxpv")

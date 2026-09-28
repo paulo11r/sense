@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://6wdkixsoqdud"]
 
 [ext_resource type="Script" uid="uid://bxppcxp0x6o5u" path="res://scripts/popup_confirmacao.gd" id="1_iqtgw"]
+[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="2_wnahb"]
+[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="3_s2yf4"]
+[ext_resource type="FontFile" uid="uid://doai2d4vwddkw" path="res://fontes/Fredoka-Regular.ttf" id="4_f7p7b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0i6t"]
 bg_color = Color(0.972549, 0.95686275, 1, 1)
@@ -107,6 +110,7 @@ vertical_alignment = 1
 [node name="Titulo" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=453196585]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("2_wnahb")
 theme_override_font_sizes/font_size = 30
 text = "Confirmar seleção"
 horizontal_alignment = 1
@@ -118,6 +122,7 @@ layout_mode = 2
 [node name="Mensagem" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=516038955]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.28235295, 0.5411765, 1)
+theme_override_fonts/font = ExtResource("3_s2yf4")
 theme_override_font_sizes/font_size = 30
 text = "Você selecionou:"
 horizontal_alignment = 1
@@ -125,6 +130,7 @@ horizontal_alignment = 1
 [node name="selecao" type="Label" parent="Centralizador/CardConfirmacao/Margens/Conteudo" unique_id=1385870735]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.35686275, 0.16470589, 0.5254902, 1)
+theme_override_fonts/font = ExtResource("2_wnahb")
 theme_override_font_sizes/font_size = 30
 text = "Feliz"
 horizontal_alignment = 1
@@ -149,6 +155,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.39607844, 0.27058825, 0.54509807, 1)
 theme_override_colors/font_pressed_color = Color(0.2784314, 0.16862746, 0.40392157, 1)
 theme_override_colors/font_hover_color = Color(0.32941177, 0.20784314, 0.45882353, 1)
+theme_override_fonts/font = ExtResource("4_f7p7b")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3jvdu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_05i11")
 theme_override_styles/hover = SubResource("StyleBoxFlat_v804h")
@@ -160,6 +167,7 @@ custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_f7p7b")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_2i17p")
 text = "Confirmar"
