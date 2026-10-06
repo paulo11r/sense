@@ -1,61 +1,101 @@
-# Sentir & Jogar
+# Sense
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=godot,figma,git,github" alt="Godot, Figma, Git, GitHub" />
+  <img src="https://skillicons.dev/icons?i=godot,figma,git,github" alt="Godot, Figma, Git e GitHub" />
 </p>
 
-Projeto acadêmico (A3) desenvolvido no Centro Universitário UniFG (Guanambi), a partir de uma proposta do curso de Enfermagem voltada ao atendimento e à interação com crianças em UBS (Unidades Básicas de Saúde), incluindo situações envolvendo crianças neurodivergentes ou com dificuldades de comunicação.
+O **Sense** é um projeto acadêmico (A3) desenvolvido no **Centro Universitário UniFG (Guanambi)** a partir de uma proposta do curso de Enfermagem voltada à comunicação com crianças em UBS (Unidades Básicas de Saúde).
 
-A proposta original da Enfermagem utiliza uma tábua sensorial e um boneco com dois rostos (feliz e triste), que ajudam a criança a expressar sentimentos ou indicar onde sente desconforto ou dor, facilitando a comunicação quando verbalizar não é simples. O desafio do projeto é criar uma experiência digital que dialogue com essa proposta, ampliando-a por meio da tecnologia.
+A proposta busca auxiliar crianças, incluindo aquelas com dificuldades de comunicação, a expressarem seus **sentimentos, intensidade emocional e localização de dores** de maneira visual e interativa.
 
-O Sentir & Jogar é a nossa interpretação desse desafio: uma experiência interativa que leva essa dinâmica de expressão de sentimentos para o digital, com foco em acessibilidade (modo sonoro/cego) e pensada para rodar também em celular.
+O projeto transforma essa ideia em uma experiência digital acessível, disponível para **Android e Windows**.
 
-## Tecnologias utilizadas
+## 📥 Download
 
-- **Godot Engine** — engine de jogos escolhida para o desenvolvimento, permitindo exportação para múltiplas plataformas (desktop e mobile)
-- **GDScript** — linguagem utilizada na lógica do jogo
-- **Figma** — prototipação e definição das telas
-- **Git / GitHub** — versionamento e colaboração
+### 🤖 Android
 
-## Plataformas
+[**Baixar Sense para Android (APK)**](https://github.com/paulo11r/sense/releases/download/v1.0.1/Sense-v1.0.0.apk)
 
-O projeto é multiplataforma e foi testado em **Android**, via exportação nativa do Godot.
+Baixe o APK e instale no dispositivo Android.
 
-## Baixar e instalar no celular (Android)
+> O Android pode solicitar autorização para instalar aplicativos de fontes externas.
 
-A forma mais rápida de testar o app é instalando o APK, sem precisar do Godot:
+### 🪟 Windows
 
-1. Acesse a aba [**Releases**](https://github.com/paulo11r/sense/releases) deste repositório.
-2. Baixe o arquivo `Sentir-e-jogar.apk` da versão mais recente.
-3. Abra o arquivo no celular e instale. Se o Android avisar sobre "fontes desconhecidas", autorize a instalação.
+[**Baixar Sense para Windows**](https://github.com/paulo11r/sense/releases/download/v1.0.1/Sense-v1.0.0-Windows.zip)
 
-> Requer Android 10 ou superior.
+1. Baixe e extraia o arquivo ZIP.
+2. Mantenha os arquivos `.exe` e `.pck` na mesma pasta.
+3. Execute `Sense-v1.0.0.exe`.
 
-## Rodar o projeto a partir do código
+[**Ver todas as versões do Sense**](https://github.com/paulo11r/sense/releases)
 
-Para abrir, editar ou gerar o APK por conta própria:
+## ✨ Principais recursos
 
-1. Instale o [Godot Engine](https://godotengine.org/download) na versão **4.7.2 (stable)**.
-2. Clone este repositório:
-   ```
-   git clone https://github.com/paulo11r/sense.git
-   ```
-3. Abra o Godot, clique em **Importar** e selecione o arquivo `project.godot` da pasta clonada.
+- Seleção de sentimentos
+- Definição da intensidade do sentimento
+- Identificação da localização da dor
+- Tela de resultados
+- Voz guiada e recursos de áudio
+- Controle de volume
+- Interface pensada para acessibilidade
+- Suporte para Android e Windows
 
-### Gerar o APK
+## 🛠️ Tecnologias
 
-1. **Templates de exportação:** em **Editor > Gerenciar Modelos de Exportação**, ative o acesso online e baixe os templates da versão 4.7.2 (basta o de Android).
-2. **Java (JDK):** instale o JDK 17 ou superior e, em **Editor > Configurações do Editor > Exportação > Android**, aponte o **Caminho do SDK Java** para a pasta do JDK.
-3. **Android SDK:** na mesma tela, confira se o **Caminho do SDK Android** está preenchido.
-4. **Compressão de texturas:** em **Configurações do Projeto** (com Configurações Avançadas ligado), vá em **Renderização > Texturas** e ative **Import ETC2 ASTC**.
-5. Vá em **Projeto > Exportar**, adicione o preset **Android**, deixe apenas a arquitetura **arm64-v8a** marcada e defina o **Export Path** com o nome do arquivo terminado em `.apk`.
-6. Clique em **Exportar Projeto**. O arquivo `.apk` gerado é o que se instala no celular (o `.idsig` que aparece junto pode ser ignorado).
+- **Godot Engine 4.7.2**
+- **GDScript**
+- **Figma**
+- **Git**
+- **GitHub**
+- **Android SDK**
+- **JDK 17**
 
-### Rodar direto no celular, sem gerar APK
+## 🚀 Executar o projeto
 
-Ative a **Depuração USB** nas Opções do Desenvolvedor do Android, conecte o celular ao PC e clique no ícone de celular na barra de execução do Godot.
+Clone o repositório:
 
-## Colaboradores
+```bash
+git clone https://github.com/paulo11r/sense.git
+```
 
-- Gabriel Normanha Reis
-- Paulo Henrique de Souza Rocha
+Depois:
+
+1. Abra o **Godot 4.7.2**.
+2. Clique em **Importar**.
+3. Selecione o arquivo `project.godot`.
+4. Abra e execute o projeto.
+
+## 📦 Exportação
+
+O projeto possui configurações de exportação para:
+
+- **Android — arm64-v8a**
+- **Windows — x86_64**
+
+No Godot, acesse:
+
+**Projeto > Exportar**
+
+Para Android, é necessário ter o **JDK 17** e o **Android SDK** configurados.
+
+## ♿ Acessibilidade
+
+O Sense inclui recursos voltados à acessibilidade, como:
+
+- Voz guiada
+- Controle de áudio e volume
+- Repetição de orientações
+- Elementos visuais de fácil identificação
+- Fluxo simplificado de interação
+
+## 👥 Colaboradores
+
+- **Gabriel Normanha Reis**
+- **Paulo Henrique de Souza Rocha**
+- **Gabriel Rocha**
+- **Matheus Gomes**
+
+## 🎓 Projeto acadêmico
+
+Projeto desenvolvido como parte da **A3 do Centro Universitário UniFG**, unindo tecnologia, acessibilidade e comunicação para auxiliar a expressão de sentimentos e desconfortos durante atendimentos.
