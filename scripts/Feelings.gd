@@ -12,16 +12,12 @@ extends Control
 @onready var back_button: Button = $MarginContainer/Content/Header/BackButton
 
 
-var popup_confirmacao_scene := preload(
-	"res://cenas/componentes/PopupConfirmacao.tscn"
-)
-
 var popup_acessibilidade_scene := preload(
 	"res://cenas/componentes/PopupAcessibilidade.tscn"
 )
 
-var popup_confirmacao: Control = null
 var popup_acessibilidade: Control = null
+var popup_intensidade: Control = null
 
 
 func _ready() -> void:
@@ -31,8 +27,6 @@ func _ready() -> void:
 		card.feeling_selected.connect(_on_feeling_selected)
 
 	back_button.pressed.connect(_on_back_pressed)
-
-	
 
 	_falar_tela()
 
@@ -70,11 +64,43 @@ func _on_feeling_selected(
 
 	AudioManager.parar()
 
-	if is_instance_valid(popup_confirmacao):
+	var sentimento := feeling_name.strip_edges().to_lower()
+
+	if sentimento == "dor" or sentimento == "com dor":
+		_ir_para_localizacao_dor()
+	else:
+		_abrir_popup_intensidade()
+
+
+func _ir_para_localizacao_dor() -> void:
+	var app = get_tree().current_scene
+
+	if app != null and app.has_method("load_screen"):
+		app.load_screen(
+			"res://cenas/telas/PainLocation.tscn"
+		)
+	else:
+		push_error(
+			"App não encontrado para abrir PainLocation."
+		)
+
+
+func _abrir_popup_intensidade() -> void:
+	if is_instance_valid(popup_intensidade):
 		return
 
-	popup_confirmacao = popup_confirmacao_scene.instantiate()
-	add_child(popup_confirmacao)
+	var popup_intensidade_scene := load(
+		"res://cenas/componentes/PopupIntensividade.tscn"
+	)
+
+	if popup_intensidade_scene == null:
+		push_error(
+			"Não foi possível carregar PopupIntensividade.tscn"
+		)
+		return
+
+	popup_intensidade = popup_intensidade_scene.instantiate()
+	add_child(popup_intensidade)
 
 
 func _on_back_pressed() -> void:
@@ -85,9 +111,13 @@ func _on_back_pressed() -> void:
 	var app = get_tree().current_scene
 
 	if app != null and app.has_method("load_screen"):
-		app.load_screen("res://cenas/telas/Menu.tscn")
+		app.load_screen(
+			"res://cenas/telas/Menu.tscn"
+		)
 	else:
-		push_error("App não encontrado em Feelings.")
+		push_error(
+			"App não encontrado em Feelings."
+		)
 
 
 func _on_accessibility_pressed() -> void:
@@ -105,4 +135,4 @@ func _on_accessibility_pressed() -> void:
 
 
 func _on_acessibility_button_pressed() -> void:
-	pass # Replace with function body.
+	_on_accessibility_pressed()

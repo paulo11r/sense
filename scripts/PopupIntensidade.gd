@@ -1,19 +1,23 @@
 extends Control
 
 @onready var slider: HSlider = $PainelPopup/Margens/Conteudo/SliderIntensidade
-@onready var valor_label: Label = $PainelPopup/Margens/Conteudo/ValorIntensidade
-@onready var descricao_label: Label = $PainelPopup/Margens/Conteudo/ValorIntensidade/DescricaoIntensidade
-@onready var confirmar_button: Button = $PainelPopup/Margens/Conteudo/AreaConfirmar/BotaoConfirmar
-@onready var botao_voltar: Button = $PainelPopup/Margens/Conteudo/BotaoVoltar
 
-var popup_confirmacao_scene := preload(
-	"res://cenas/componentes/PopupConfirmacao.tscn"
-)
+@onready var valor_label: Label = \
+	$PainelPopup/Margens/Conteudo/ValorIntensidade
 
-var popup_confirmacao: Control = null
+@onready var descricao_label: Label = \
+	$PainelPopup/Margens/Conteudo/ValorIntensidade/DescricaoIntensidade
+
+@onready var confirmar_button: Button = \
+	$PainelPopup/Margens/Conteudo/AreaConfirmar/BotaoConfirmar
+
+@onready var botao_voltar: Button = \
+	$PainelPopup/Margens/Conteudo/BotaoVoltar
 
 
 func _ready() -> void:
+	print("Popup de intensidade aberto")
+
 	slider.value_changed.connect(_on_slider_changed)
 	confirmar_button.pressed.connect(_on_confirmar_pressed)
 	botao_voltar.pressed.connect(_on_voltar_pressed)
@@ -48,20 +52,37 @@ func _update_display(value: float) -> void:
 
 
 func _on_confirmar_pressed() -> void:
+	print(
+		"Intensidade confirmada: ",
+		int(slider.value)
+	)
+
 	AudioManager.parar()
 
-	GameState.selected_intensity = str(int(slider.value))
+	GameState.selected_intensity = str(
+		int(slider.value)
+	)
 
-	if is_instance_valid(popup_confirmacao):
-		return
+	_ir_para_resultado()
 
-	popup_confirmacao = popup_confirmacao_scene.instantiate()
 
-	popup_confirmacao.tipo_confirmacao = "intensidade"
+func _ir_para_resultado() -> void:
+	var app = get_tree().current_scene
 
-	add_child(popup_confirmacao)
+	if app != null and app.has_method("load_screen"):
+		queue_free()
+
+		app.load_screen(
+			"res://cenas/telas/ResultsFinal.tscn"
+		)
+	else:
+		push_error(
+			"App não encontrado para abrir ResultsFinal."
+		)
 
 
 func _on_voltar_pressed() -> void:
+	print("Voltando do popup de intensidade")
+
 	AudioManager.parar()
 	queue_free()

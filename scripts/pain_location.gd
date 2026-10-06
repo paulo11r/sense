@@ -9,29 +9,35 @@ extends Control
 	$MarginContainer/Content/FeelingsGrid/FeelingsCard6
 ]
 
-@onready var back_button: Button = $MarginContainer/Content/Header/BackButton
+@onready var back_button: Button = \
+	$MarginContainer/Content/Header/BackButton
 
-var popup_confirmacao_scene := preload(
-	"res://cenas/componentes/PopupConfirmacao.tscn"
-)
 
 var popup_acessibilidade_scene := preload(
 	"res://cenas/componentes/PopupAcessibilidade.tscn"
 )
 
-var popup_confirmacao: Control = null
 var popup_acessibilidade: Control = null
+var popup_intensidade: Control = null
 
 
 func _ready() -> void:
 	print("PainLocation carregada")
 
 	for card in cards:
-		if not card.feeling_selected.is_connected(_on_location_selected):
-			card.feeling_selected.connect(_on_location_selected)
+		if not card.feeling_selected.is_connected(
+			_on_location_selected
+		):
+			card.feeling_selected.connect(
+				_on_location_selected
+			)
 
-	if not back_button.pressed.is_connected(_on_back_pressed):
-		back_button.pressed.connect(_on_back_pressed)
+	if not back_button.pressed.is_connected(
+		_on_back_pressed
+	):
+		back_button.pressed.connect(
+			_on_back_pressed
+		)
 
 	_falar_tela()
 
@@ -39,7 +45,8 @@ func _ready() -> void:
 func _falar_tela() -> void:
 	AudioManager.falar(
 		"Mostre onde você está sentindo dor. "
-		+ "Escolha entre cabeça, peito, barriga, braço, perna ou garganta."
+		+ "Escolha entre cabeça, peito, barriga, "
+		+ "braço, perna ou garganta."
 	)
 
 
@@ -50,7 +57,10 @@ func _on_location_selected(
 	bg_color: Color,
 	border_color: Color
 ) -> void:
-	print("Local da dor selecionado: ", feeling_name)
+	print(
+		"Local da dor selecionado: ",
+		feeling_name
+	)
 
 	GameState.pain_location = _formatar_local_dor(
 		feeling_name
@@ -61,23 +71,42 @@ func _on_location_selected(
 
 	AudioManager.parar()
 
-	if is_instance_valid(popup_confirmacao):
+	print(
+		"Local da dor salvo: ",
+		GameState.pain_location
+	)
+
+	_abrir_popup_intensidade()
+
+
+func _abrir_popup_intensidade() -> void:
+	if is_instance_valid(popup_intensidade):
 		return
 
-	popup_confirmacao = popup_confirmacao_scene.instantiate()
+	var popup_intensidade_scene := load(
+		"res://cenas/componentes/PopupIntensividade.tscn"
+	)
 
-	popup_confirmacao.tipo_confirmacao = "local_dor"
+	if popup_intensidade_scene == null:
+		push_error(
+			"Não foi possível carregar "
+			+ "PopupIntensividade.tscn"
+		)
+		return
 
-	add_child(popup_confirmacao)
+	popup_intensidade = \
+		popup_intensidade_scene.instantiate()
+
+	add_child(popup_intensidade)
 
 	print(
-		"Confirmação do local da dor aberta: ",
-		GameState.pain_location
+		"Popup de intensidade aberto para local da dor"
 	)
 
 
 func _formatar_local_dor(local: String) -> String:
 	match local.strip_edges().to_lower():
+
 		"cabeca", "cabeça":
 			return "Cabeça"
 
@@ -101,12 +130,15 @@ func _formatar_local_dor(local: String) -> String:
 
 
 func _on_back_pressed() -> void:
-	print("Voltando de PainLocation para Feelings")
+	print(
+		"Voltando de PainLocation para Feelings"
+	)
 
 	AudioManager.parar()
 
 	GameState.pain_location = ""
 	GameState.pain_description = ""
+	GameState.pain_icon = null
 
 	var app = get_tree().current_scene
 
@@ -116,21 +148,31 @@ func _on_back_pressed() -> void:
 		)
 	else:
 		push_error(
-			"App não encontrado para voltar para Feelings."
+			"App não encontrado para voltar "
+			+ "para Feelings."
 		)
 
 
 func _on_accessibility_pressed() -> void:
-	print("Acessibilidade clicada em PainLocation")
+	print(
+		"Acessibilidade clicada em PainLocation"
+	)
 
 	AudioManager.parar()
 
-	if is_instance_valid(popup_acessibilidade):
+	if is_instance_valid(
+		popup_acessibilidade
+	):
 		return
 
-	popup_acessibilidade = popup_acessibilidade_scene.instantiate()
-	add_child(popup_acessibilidade)
+	popup_acessibilidade = \
+		popup_acessibilidade_scene.instantiate()
+
+	add_child(
+		popup_acessibilidade
+	)
 
 	print(
-		"Popup de acessibilidade aberto em PainLocation"
+		"Popup de acessibilidade aberto "
+		+ "em PainLocation"
 	)
