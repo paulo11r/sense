@@ -13,9 +13,9 @@ config_version=5
 config/name="sense"
 run/main_scene="uid://y4xd1l6j347i"
 config/features=PackedStringArray("4.7", "Mobile")
-boot_splash/bg_color=Color(1, 0.5294118, 1, 1)
-boot_splash/image="uid://ngmdux6eeo2o"
-config/icon="uid://ngmdux6eeo2o"
+boot_splash/bg_color=Color(0.9647059, 0.7882353, 0.95686275, 1)
+boot_splash/image="uid://mw0srv6i857f"
+config/icon="uid://mw0srv6i857f"
 
 [autoload]
 

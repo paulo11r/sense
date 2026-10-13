@@ -236,7 +236,7 @@ size_flags_horizontal = 3
 [node name="ValorVolume" type="Label" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume/LinhaVolume" unique_id=1581614257]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.09019608, 0.101960786, 0.16862746, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 57
 text = "70%"
 
 [node name="HSlider" type="HSlider" parent="Centralizador/Card/Margens/Conteudo/CardVolume/MargemVolume/ConteudoVolume" unique_id=276081547]

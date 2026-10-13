@@ -152,11 +152,13 @@ autowrap_mode = 2
 
 [node name="ResultCard" type="PanelContainer" parent="MarginContainer/Content" unique_id=470905401]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_xiwro")
 
 [node name="CardContent" type="VBoxContainer" parent="MarginContainer/Content/ResultCard" unique_id=385082465]
 layout_mode = 2
 theme_override_constants/separation = 26
+alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1872160242]
 custom_minimum_size = Vector2(90, 90)
@@ -227,9 +229,6 @@ theme_override_fonts/font = ExtResource("3_pnmxw")
 theme_override_font_sizes/font_size = 54
 theme_override_styles/normal = SubResource("StyleBoxFlat_3c2fn")
 text = "🔊Ouvir Novamente"
-
-[node name="Spacer" type="Control" parent="MarginContainer/Content" unique_id=1612781965]
-layout_mode = 2
 
 [node name="Instruction" type="Label" parent="MarginContainer/Content" unique_id=438095753]
 layout_mode = 2

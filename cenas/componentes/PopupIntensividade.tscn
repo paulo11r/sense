@@ -89,8 +89,8 @@ theme_override_constants/separation = 18
 [node name="BotaoVoltar" type="Button" parent="PainelPopup/Margens/Conteudo" unique_id=1515068021]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_3jvdu")
 text = "←"
 alignment = 0

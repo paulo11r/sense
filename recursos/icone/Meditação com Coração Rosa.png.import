@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ngmdux6eeo2o"
-path="res://.godot/imported/Ícone de Meditação com Coração Pink.png-efbd29c0b67dfd563323c6c91c4059d1.ctex"
+uid="uid://mw0srv6i857f"
+path="res://.godot/imported/Meditação com Coração Rosa.png-ccb81555e00525859f6179f026efa950.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://recursos/icone/Ícone de Meditação com Coração Pink.png"
-dest_files=["res://.godot/imported/Ícone de Meditação com Coração Pink.png-efbd29c0b67dfd563323c6c91c4059d1.ctex"]
+source_file="res://recursos/icone/Meditação com Coração Rosa.png"
+dest_files=["res://.godot/imported/Meditação com Coração Rosa.png-ccb81555e00525859f6179f026efa950.ctex"]
 
 [params]
 
