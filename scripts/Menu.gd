@@ -1,7 +1,7 @@
 extends Control
 
 @onready var start_button: Button = $SafeArea/MainColumn/Hero/HeroText/StartButton
-@onready var accessibility_button: Button = $SafeArea/MainColumn/Header/AccessibilityButton
+@onready var accessibility_button: Button = $SafeArea/MainColumn/TopSection/AccessibilityButton
 
 var popup_acessibilidade_scene := preload(
 	"res://cenas/componentes/PopupAcessibilidade.tscn"
@@ -11,8 +11,6 @@ var popup_acessibilidade: Control = null
 
 
 func _ready() -> void:
-	print("Menu carregado")
-
 	start_button.pressed.connect(_on_start_pressed)
 	accessibility_button.pressed.connect(_on_accessibility_pressed)
 
@@ -24,8 +22,6 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	print("Botão iniciar clicado")
-
 	AudioManager.parar()
 
 	var app = get_tree().current_scene
@@ -37,8 +33,6 @@ func _on_start_pressed() -> void:
 
 
 func _on_accessibility_pressed() -> void:
-	print("Acessibilidade clicada no Menu")
-
 	AudioManager.parar()
 
 	if is_instance_valid(popup_acessibilidade):

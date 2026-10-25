@@ -9,6 +9,7 @@
 /build/
 build/
 exports/
+android/
 
 # Sistema operacional
 .DS_Store

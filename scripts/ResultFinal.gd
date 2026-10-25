@@ -22,8 +22,6 @@ var popup_acessibilidade: Control = null
 
 
 func _ready() -> void:
-	print("ResultsFinal carregada")
-
 	_load_feeling_data()
 	_apply_card_colors()
 
@@ -234,8 +232,6 @@ func _falar_resultado() -> void:
 
 
 func _on_play_again_pressed() -> void:
-	print("Fazer de novo clicado")
-
 	AudioManager.parar()
 
 	var app = get_tree().current_scene
@@ -253,15 +249,11 @@ func _on_play_again_pressed() -> void:
 
 
 func _on_retry_pressed() -> void:
-	print("Ouvir novamente clicado")
-
 	AudioManager.parar()
 	_falar_resultado()
 
 
 func _on_back_pressed() -> void:
-	print("Voltar clicado em ResultsFinal")
-
 	AudioManager.parar()
 
 	var app = get_tree().current_scene
@@ -279,8 +271,6 @@ func _on_back_pressed() -> void:
 
 
 func _on_accessibility_pressed() -> void:
-	print("Acessibilidade clicada em ResultsFinal")
-
 	AudioManager.parar()
 
 	if is_instance_valid(popup_acessibilidade):
@@ -288,7 +278,3 @@ func _on_accessibility_pressed() -> void:
 
 	popup_acessibilidade = popup_acessibilidade_scene.instantiate()
 	add_child(popup_acessibilidade)
-
-	print(
-		"Popup de acessibilidade aberto em ResultsFinal"
-	)

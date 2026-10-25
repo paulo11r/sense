@@ -54,14 +54,9 @@ func _on_location_selected(
 	feeling_name: String,
 	description: String,
 	icon: Texture2D,
-	bg_color: Color,
-	border_color: Color
+	_bg_color: Color,
+	_border_color: Color
 ) -> void:
-	print(
-		"Local da dor selecionado: ",
-		feeling_name
-	)
-
 	GameState.pain_location = _formatar_local_dor(
 		feeling_name
 	)
@@ -70,11 +65,6 @@ func _on_location_selected(
 	GameState.pain_icon = icon
 
 	AudioManager.parar()
-
-	print(
-		"Local da dor salvo: ",
-		GameState.pain_location
-	)
 
 	_abrir_popup_intensidade()
 
@@ -98,10 +88,6 @@ func _abrir_popup_intensidade() -> void:
 		popup_intensidade_scene.instantiate()
 
 	add_child(popup_intensidade)
-
-	print(
-		"Popup de intensidade aberto para local da dor"
-	)
 
 
 func _formatar_local_dor(local: String) -> String:
@@ -130,10 +116,6 @@ func _formatar_local_dor(local: String) -> String:
 
 
 func _on_back_pressed() -> void:
-	print(
-		"Voltando de PainLocation para Feelings"
-	)
-
 	AudioManager.parar()
 
 	GameState.pain_location = ""
@@ -154,10 +136,6 @@ func _on_back_pressed() -> void:
 
 
 func _on_accessibility_pressed() -> void:
-	print(
-		"Acessibilidade clicada em PainLocation"
-	)
-
 	AudioManager.parar()
 
 	if is_instance_valid(
@@ -170,9 +148,4 @@ func _on_accessibility_pressed() -> void:
 
 	add_child(
 		popup_acessibilidade
-	)
-
-	print(
-		"Popup de acessibilidade aberto "
-		+ "em PainLocation"
 	)

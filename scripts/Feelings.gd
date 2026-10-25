@@ -21,8 +21,6 @@ var popup_intensidade: Control = null
 
 
 func _ready() -> void:
-	print("Tela Feelings carregada")
-
 	for card in cards:
 		card.feeling_selected.connect(_on_feeling_selected)
 
@@ -54,8 +52,6 @@ func _on_feeling_selected(
 	bg_color: Color,
 	border_color: Color
 ) -> void:
-	print("Sentimento selecionado: ", feeling_name)
-
 	GameState.selected_feeling = feeling_name
 	GameState.selected_description = description
 	GameState.selected_icon = icon
@@ -104,8 +100,6 @@ func _abrir_popup_intensidade() -> void:
 
 
 func _on_back_pressed() -> void:
-	print("Voltando para Menu")
-
 	AudioManager.parar()
 
 	var app = get_tree().current_scene
@@ -121,8 +115,6 @@ func _on_back_pressed() -> void:
 
 
 func _on_accessibility_pressed() -> void:
-	print("Acessibilidade clicada em Feelings")
-
 	AudioManager.parar()
 
 	if is_instance_valid(popup_acessibilidade):
