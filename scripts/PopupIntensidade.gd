@@ -16,8 +16,6 @@ extends Control
 
 
 func _ready() -> void:
-	print("Popup de intensidade aberto")
-
 	slider.value_changed.connect(_on_slider_changed)
 	confirmar_button.pressed.connect(_on_confirmar_pressed)
 	botao_voltar.pressed.connect(_on_voltar_pressed)
@@ -52,11 +50,6 @@ func _update_display(value: float) -> void:
 
 
 func _on_confirmar_pressed() -> void:
-	print(
-		"Intensidade confirmada: ",
-		int(slider.value)
-	)
-
 	AudioManager.parar()
 
 	GameState.selected_intensity = str(
@@ -82,7 +75,5 @@ func _ir_para_resultado() -> void:
 
 
 func _on_voltar_pressed() -> void:
-	print("Voltando do popup de intensidade")
-
 	AudioManager.parar()
 	queue_free()

@@ -14,8 +14,6 @@ func show_menu() -> void:
 
 
 func load_screen(scene_path: String) -> void:
-	print("Tentando carregar: ", scene_path)
-
 	if is_instance_valid(current_screen):
 		if current_screen.get_parent() == screen_container:
 			screen_container.remove_child(current_screen)
@@ -31,5 +29,3 @@ func load_screen(scene_path: String) -> void:
 
 	current_screen = scene_resource.instantiate()
 	screen_container.add_child(current_screen)
-
-	print("Tela carregada com sucesso: ", scene_path)

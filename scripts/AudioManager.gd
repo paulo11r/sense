@@ -5,7 +5,15 @@ var ultimo_texto: String = ""
 
 
 func _ready() -> void:
+	await get_tree().create_timer(0.5).timeout
 	_configurar_voz()
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		DisplayServer.tts_stop()
+        
+	elif what == NOTIFICATION_APPLICATION_PAUSED:
+		DisplayServer.tts_stop()
 
 
 func _configurar_voz() -> void:
