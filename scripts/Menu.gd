@@ -9,7 +9,6 @@ var popup_acessibilidade_scene := preload(
 
 var popup_acessibilidade: Control = null
 
-
 func _ready() -> void:
 	start_button.pressed.connect(_on_start_pressed)
 	accessibility_button.pressed.connect(_on_accessibility_pressed)
@@ -20,17 +19,9 @@ func _ready() -> void:
 		+ "Pressione iniciar para descobrir como você está se sentindo hoje."
 	)
 
-
 func _on_start_pressed() -> void:
 	AudioManager.parar()
-
-	var app = get_tree().current_scene
-
-	if app != null and app.has_method("load_screen"):
-		app.load_screen("res://cenas/telas/Feelings.tscn")
-	else:
-		push_error("App não encontrado no Menu.")
-
+	GameState.load_screen("res://cenas/telas/Feelings.tscn")
 
 func _on_accessibility_pressed() -> void:
 	AudioManager.parar()

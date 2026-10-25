@@ -1,3 +1,53 @@
 [gd_resource type="Theme" format=3 uid="uid://ft8rp3j7pqp5"]
 
+[sub_resource type="DPITexture" id="DPITexture_2rb5f"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 2.5
+
+[sub_resource type="DPITexture" id="DPITexture_b2a5s"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+base_scale = 2.5
+
+[sub_resource type="DPITexture" id="DPITexture_1xdih"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+base_scale = 2.5
+
+[sub_resource type="DPITexture" id="DPITexture_fep3e"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"8\"><path fill=\"#fff\" fill-opacity=\".25\" d=\"M1 0h2v16H1z\"/></svg>
+"
+base_scale = 2.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_faqc1"]
+content_margin_top = 29.0
+content_margin_bottom = 4.0
+bg_color = Color(0.8509804, 0.8235294, 0.8901961, 1)
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1lqx"]
+bg_color = Color(0.35686275, 0.16470589, 0.5254902, 1)
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2cue"]
+bg_color = Color(0.4392157, 0.2509804, 0.627451, 1)
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+
 [resource]
+HSlider/icons/grabber = SubResource("DPITexture_2rb5f")
+HSlider/icons/grabber_disabled = SubResource("DPITexture_b2a5s")
+HSlider/icons/grabber_highlight = SubResource("DPITexture_1xdih")
+HSlider/icons/tick = SubResource("DPITexture_fep3e")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_faqc1")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_p1lqx")
+HSlider/styles/slider = SubResource("StyleBoxFlat_y2cue")

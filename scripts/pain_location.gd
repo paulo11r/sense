@@ -22,8 +22,6 @@ var popup_intensidade: Control = null
 
 
 func _ready() -> void:
-	print("PainLocation carregada")
-
 	for card in cards:
 		if not card.feeling_selected.is_connected(
 			_on_location_selected
@@ -66,29 +64,11 @@ func _on_location_selected(
 
 	AudioManager.parar()
 
-	_abrir_popup_intensidade()
+	_ir_para_resultado()
 
-
-func _abrir_popup_intensidade() -> void:
-	if is_instance_valid(popup_intensidade):
-		return
-
-	var popup_intensidade_scene := load(
-		"res://cenas/componentes/PopupIntensividade.tscn"
-	)
-
-	if popup_intensidade_scene == null:
-		push_error(
-			"Não foi possível carregar "
-			+ "PopupIntensividade.tscn"
-		)
-		return
-
-	popup_intensidade = \
-		popup_intensidade_scene.instantiate()
-
-	add_child(popup_intensidade)
-
+func _ir_para_resultado() -> void:
+	AudioManager.parar()
+	GameState.load_screen("res://cenas/telas/ResultsFinal.tscn")
 
 func _formatar_local_dor(local: String) -> String:
 	match local.strip_edges().to_lower():
@@ -122,18 +102,7 @@ func _on_back_pressed() -> void:
 	GameState.pain_description = ""
 	GameState.pain_icon = null
 
-	var app = get_tree().current_scene
-
-	if app != null and app.has_method("load_screen"):
-		app.load_screen(
-			"res://cenas/telas/Feelings.tscn"
-		)
-	else:
-		push_error(
-			"App não encontrado para voltar "
-			+ "para Feelings."
-		)
-
+	GameState.load_screen("res://cenas/telas/Feelings.tscn")
 
 func _on_accessibility_pressed() -> void:
 	AudioManager.parar()

@@ -11,7 +11,6 @@ extends Control
 
 @onready var back_button: Button = $MarginContainer/Content/Header/BackButton
 
-
 var popup_acessibilidade_scene := preload(
 	"res://cenas/componentes/PopupAcessibilidade.tscn"
 )
@@ -19,15 +18,14 @@ var popup_acessibilidade_scene := preload(
 var popup_acessibilidade: Control = null
 var popup_intensidade: Control = null
 
-
 func _ready() -> void:
+	GameState.reset()
 	for card in cards:
 		card.feeling_selected.connect(_on_feeling_selected)
 
 	back_button.pressed.connect(_on_back_pressed)
 
 	_falar_tela()
-
 
 func _falar_tela() -> void:
 	var nomes: Array[String] = []
@@ -43,7 +41,6 @@ func _falar_tela() -> void:
 		+ lista_sentimentos
 		+ ". Escolha uma opção."
 	)
-
 
 func _on_feeling_selected(
 	feeling_name: String,
@@ -65,54 +62,19 @@ func _on_feeling_selected(
 	if sentimento == "dor" or sentimento == "com dor":
 		_ir_para_localizacao_dor()
 	else:
-		_abrir_popup_intensidade()
-
+		_ir_para_resultado()
 
 func _ir_para_localizacao_dor() -> void:
-	var app = get_tree().current_scene
+	AudioManager.parar()
+	GameState.load_screen("res://cenas/telas/PainLocation.tscn")
 
-	if app != null and app.has_method("load_screen"):
-		app.load_screen(
-			"res://cenas/telas/PainLocation.tscn"
-		)
-	else:
-		push_error(
-			"App não encontrado para abrir PainLocation."
-		)
-
-
-func _abrir_popup_intensidade() -> void:
-	if is_instance_valid(popup_intensidade):
-		return
-
-	var popup_intensidade_scene := load(
-		"res://cenas/componentes/PopupIntensividade.tscn"
-	)
-
-	if popup_intensidade_scene == null:
-		push_error(
-			"Não foi possível carregar PopupIntensividade.tscn"
-		)
-		return
-
-	popup_intensidade = popup_intensidade_scene.instantiate()
-	add_child(popup_intensidade)
-
+func _ir_para_resultado() -> void:
+	AudioManager.parar()
+	GameState.load_screen("res://cenas/telas/ResultsFinal.tscn")
 
 func _on_back_pressed() -> void:
 	AudioManager.parar()
-
-	var app = get_tree().current_scene
-
-	if app != null and app.has_method("load_screen"):
-		app.load_screen(
-			"res://cenas/telas/Menu.tscn"
-		)
-	else:
-		push_error(
-			"App não encontrado em Feelings."
-		)
-
+	GameState.load_screen("res://cenas/telas/Menu.tscn")
 
 func _on_accessibility_pressed() -> void:
 	AudioManager.parar()
@@ -122,8 +84,6 @@ func _on_accessibility_pressed() -> void:
 
 	popup_acessibilidade = popup_acessibilidade_scene.instantiate()
 	add_child(popup_acessibilidade)
-
-	print("Popup de acessibilidade aberto em Feelings")
 
 
 func _on_acessibility_button_pressed() -> void:
