@@ -42,28 +42,22 @@ func _on_audio_toggled(ativado: bool) -> void:
 	if ativado:
 		AcessibilityManager.definir_audio_ativo(true)
 
-		if AcessibilityManager.voz_guiada:
+		if AcessibilityManager.audio_ativo:
 			AudioManager.falar("Áudio ativado.")
 	else:
-		if AcessibilityManager.audio_ativo and AcessibilityManager.voz_guiada:
-			AudioManager.falar("Áudio desativado.")
-			await get_tree().create_timer(2.0).timeout
-
 		AcessibilityManager.definir_audio_ativo(false)
+		AudioManager.falar("Áudio desativado.")
 
 
 func _on_voz_toggled(ativado: bool) -> void:
 	if ativado:
 		AcessibilityManager.definir_voz_guiada(true)
 
-		if AcessibilityManager.audio_ativo:
+		if AcessibilityManager.voz_guiada:
 			AudioManager.falar("Voz guiada ativada.")
 	else:
-		if AcessibilityManager.voz_guiada and AcessibilityManager.audio_ativo:
-			AudioManager.falar("Voz guiada desativada.")
-			await get_tree().create_timer(2.0).timeout
-
 		AcessibilityManager.definir_voz_guiada(false)
+		AudioManager.falar("Voz guiada desativada.")
 
 
 func _on_volume_changed(valor: float) -> void:
@@ -90,6 +84,5 @@ func _falar_instrucoes() -> void:
 
 
 func _on_fechar_pressed() -> void:
-	print("X da acessibilidade clicado")
 	AudioManager.parar()
 	queue_free()

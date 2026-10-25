@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="2_l41uw"]
 [ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="3_q10tu"]
 [ext_resource type="FontFile" uid="uid://doai2d4vwddkw" path="res://fontes/Fredoka-Regular.ttf" id="4_gctk7"]
+[ext_resource type="Script" uid="uid://dcryrpkt3agcg" path="res://scripts/mood_card.gd" id="6_q10tu"]
 
 [sub_resource type="Theme" id="Theme_2i17p"]
 
@@ -56,7 +57,7 @@ shadow_offset = Vector2(0, 8)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_emotions"]
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=639141517]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -65,7 +66,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mr041")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1762009363]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,7 +76,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.972549, 0.968627, 1, 1)
 
-[node name="SafeArea" type="MarginContainer" parent="."]
+[node name="SafeArea" type="MarginContainer" parent="." unique_id=2145413192]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,24 +89,24 @@ theme_override_constants/margin_top = 90
 theme_override_constants/margin_right = 70
 theme_override_constants/margin_bottom = 70
 
-[node name="MainColumn" type="VBoxContainer" parent="SafeArea"]
+[node name="MainColumn" type="VBoxContainer" parent="SafeArea" unique_id=1219547075]
 layout_mode = 2
 
-[node name="TopSection" type="HBoxContainer" parent="SafeArea/MainColumn"]
+[node name="TopSection" type="HBoxContainer" parent="SafeArea/MainColumn" unique_id=1848954593]
 custom_minimum_size = Vector2(0, 180)
 layout_mode = 2
 
-[node name="LeftSpacer" type="Control" parent="SafeArea/MainColumn/TopSection"]
+[node name="LeftSpacer" type="Control" parent="SafeArea/MainColumn/TopSection" unique_id=621235668]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 
-[node name="HeaderTexts" type="VBoxContainer" parent="SafeArea/MainColumn/TopSection"]
+[node name="HeaderTexts" type="VBoxContainer" parent="SafeArea/MainColumn/TopSection" unique_id=1979333281]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = -5
 alignment = 1
 
-[node name="Logo" type="Label" parent="SafeArea/MainColumn/TopSection/HeaderTexts"]
+[node name="Logo" type="Label" parent="SafeArea/MainColumn/TopSection/HeaderTexts" unique_id=743702379]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.258824, 0.709804, 1)
 theme_override_fonts/font = ExtResource("2_l41uw")
@@ -114,7 +115,7 @@ text = "SENSE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TagLine" type="Label" parent="SafeArea/MainColumn/TopSection/HeaderTexts"]
+[node name="TagLine" type="Label" parent="SafeArea/MainColumn/TopSection/HeaderTexts" unique_id=465214700]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.188235, 0.156863, 0.372549, 1)
 theme_override_fonts/font = ExtResource("3_q10tu")
@@ -122,7 +123,7 @@ theme_override_font_sizes/font_size = 45
 text = "Pequenos passos, mais bem-estar."
 horizontal_alignment = 1
 
-[node name="AccessibilityButton" type="Button" parent="SafeArea/MainColumn/TopSection"]
+[node name="AccessibilityButton" type="Button" parent="SafeArea/MainColumn/TopSection" unique_id=673332076]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 size_flags_vertical = 4
@@ -136,22 +137,22 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_05i11")
 text = "♿"
 flat = true
 
-[node name="TopSpacer" type="Control" parent="SafeArea/MainColumn"]
+[node name="TopSpacer" type="Control" parent="SafeArea/MainColumn" unique_id=394979244]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Hero" type="HBoxContainer" parent="SafeArea/MainColumn"]
+[node name="Hero" type="HBoxContainer" parent="SafeArea/MainColumn" unique_id=217835066]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="HeroText" type="VBoxContainer" parent="SafeArea/MainColumn/Hero"]
+[node name="HeroText" type="VBoxContainer" parent="SafeArea/MainColumn/Hero" unique_id=1989552320]
 custom_minimum_size = Vector2(480, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="Question" type="Label" parent="SafeArea/MainColumn/Hero/HeroText"]
+[node name="Question" type="Label" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=1906030737]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.188235, 0.156863, 0.372549, 1)
 theme_override_fonts/font = ExtResource("4_gctk7")
@@ -160,7 +161,7 @@ text = "Vamos descobrir
 como você está
 se sentindo hoje?"
 
-[node name="Label" type="Label" parent="SafeArea/MainColumn/Hero/HeroText"]
+[node name="Label" type="Label" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=119543498]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.960784, 0.341176, 0.490196, 1)
 theme_override_fonts/font = ExtResource("4_gctk7")
@@ -168,11 +169,11 @@ theme_override_font_sizes/font_size = 40
 text = "Aqui é um espaço seguro
 para você se ouvir."
 
-[node name="ButtonSpacer" type="Control" parent="SafeArea/MainColumn/Hero/HeroText"]
+[node name="ButtonSpacer" type="Control" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=5649634]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="SafeArea/MainColumn/Hero/HeroText"]
+[node name="StartButton" type="Button" parent="SafeArea/MainColumn/Hero/HeroText" unique_id=439810146]
 custom_minimum_size = Vector2(360, 95)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -181,7 +182,7 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_q0i6t")
 text = "INICIAR"
 
-[node name="Illustraction" type="TextureRect" parent="SafeArea/MainColumn/Hero"]
+[node name="Illustraction" type="TextureRect" parent="SafeArea/MainColumn/Hero" unique_id=1634398683]
 custom_minimum_size = Vector2(400, 450)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -189,27 +190,28 @@ texture = ExtResource("1_um1n5")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="BottomSpacer" type="Control" parent="SafeArea/MainColumn"]
+[node name="BottomSpacer" type="Control" parent="SafeArea/MainColumn" unique_id=349521517]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MoodCard" type="PanelContainer" parent="SafeArea/MainColumn"]
+[node name="MoodCard" type="PanelContainer" parent="SafeArea/MainColumn" unique_id=230168404]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mood_card")
+script = ExtResource("6_q10tu")
 
-[node name="MoodMargin" type="MarginContainer" parent="SafeArea/MainColumn/MoodCard"]
+[node name="MoodMargin" type="MarginContainer" parent="SafeArea/MainColumn/MoodCard" unique_id=1043672568]
 layout_mode = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 40
 
-[node name="FeelingsPreview" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin"]
+[node name="FeelingsPreview" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin" unique_id=566907498]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="PreviewTitle" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview"]
+[node name="PreviewTitle" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview" unique_id=1913686310]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.333333, 0.258824, 0.709804, 1)
 theme_override_fonts/font = ExtResource("3_q10tu")
@@ -217,167 +219,173 @@ theme_override_font_sizes/font_size = 48
 text = "Como você está se sentindo?"
 horizontal_alignment = 1
 
-[node name="EmotionsRow" type="HBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview"]
+[node name="EmotionsRow" type="HBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview" unique_id=1867521927]
 layout_mode = 2
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="BtnHappy" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow"]
+[node name="BtnHappy" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow" unique_id=645640538]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxEmpty_emotions")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_emotions")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_emotions")
 
-[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy"]
+[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy" unique_id=2059680509]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 mouse_filter = 2
+alignment = 1
 
-[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy/VBox"]
+[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy/VBox" unique_id=1642466697]
 layout_mode = 2
 theme_override_font_sizes/font_size = 65
 text = "😊"
 horizontal_alignment = 1
 
-[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy/VBox"]
+[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy/VBox" unique_id=1752344244]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.423529, 0.313725, 0.85098, 1)
 theme_override_font_sizes/font_size = 28
 text = "Feliz"
 horizontal_alignment = 1
 
-[node name="BtnCalm" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow"]
+[node name="BtnCalm" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow" unique_id=800355762]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxEmpty_emotions")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_emotions")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_emotions")
 
-[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm"]
+[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm" unique_id=1609862698]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 mouse_filter = 2
+alignment = 1
 
-[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm/VBox"]
+[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm/VBox" unique_id=248047414]
 layout_mode = 2
 theme_override_font_sizes/font_size = 65
 text = "😌"
 horizontal_alignment = 1
 
-[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm/VBox"]
+[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm/VBox" unique_id=785065366]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.423529, 0.313725, 0.85098, 1)
 theme_override_font_sizes/font_size = 28
 text = "Calmo"
 horizontal_alignment = 1
 
-[node name="BtnNauseous" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow"]
+[node name="BtnNauseous" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow" unique_id=671259705]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxEmpty_emotions")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_emotions")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_emotions")
 
-[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous"]
+[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous" unique_id=870427773]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 mouse_filter = 2
+alignment = 1
 
-[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous/VBox"]
+[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous/VBox" unique_id=1241613647]
 layout_mode = 2
 theme_override_font_sizes/font_size = 65
 text = "🤢"
 horizontal_alignment = 1
 
-[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous/VBox"]
+[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous/VBox" unique_id=1811414107]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.423529, 0.313725, 0.85098, 1)
 theme_override_font_sizes/font_size = 28
 text = "Enjoado"
 horizontal_alignment = 1
 
-[node name="BtnSad" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow"]
+[node name="BtnSad" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow" unique_id=1876831964]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxEmpty_emotions")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_emotions")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_emotions")
 
-[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad"]
+[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad" unique_id=1316480586]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 mouse_filter = 2
+alignment = 1
 
-[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad/VBox"]
+[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad/VBox" unique_id=386317145]
 layout_mode = 2
 theme_override_font_sizes/font_size = 65
 text = "😢"
 horizontal_alignment = 1
 
-[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad/VBox"]
+[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad/VBox" unique_id=2017989512]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.423529, 0.313725, 0.85098, 1)
 theme_override_font_sizes/font_size = 28
 text = "Triste"
 horizontal_alignment = 1
 
-[node name="BtnAnxious" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow"]
+[node name="BtnAnxious" type="Button" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow" unique_id=1225650982]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxEmpty_emotions")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_emotions")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_emotions")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_emotions")
 
-[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious"]
+[node name="VBox" type="VBoxContainer" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious" unique_id=1670285144]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
 mouse_filter = 2
+alignment = 1
 
-[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious/VBox"]
+[node name="Icon" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious/VBox" unique_id=866721455]
 layout_mode = 2
 theme_override_font_sizes/font_size = 65
 text = "😰"
 horizontal_alignment = 1
 
-[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious/VBox"]
+[node name="Name" type="Label" parent="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious/VBox" unique_id=1775311163]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.423529, 0.313725, 0.85098, 1)
 theme_override_font_sizes/font_size = 28
 text = "Ansioso"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnHappy" to="SafeArea/MainColumn/MoodCard" method="_on_btn_happy_pressed"]
+[connection signal="pressed" from="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnCalm" to="SafeArea/MainColumn/MoodCard" method="_on_btn_calm_pressed"]
+[connection signal="pressed" from="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnNauseous" to="SafeArea/MainColumn/MoodCard" method="_on_btn_nauseous_pressed"]
+[connection signal="pressed" from="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnSad" to="SafeArea/MainColumn/MoodCard" method="_on_btn_sad_pressed"]
+[connection signal="pressed" from="SafeArea/MainColumn/MoodCard/MoodMargin/FeelingsPreview/EmotionsRow/BtnAnxious" to="SafeArea/MainColumn/MoodCard" method="_on_btn_anxious_pressed"]

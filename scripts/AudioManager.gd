@@ -35,7 +35,7 @@ func falar(texto: String, interromper: bool = true) -> void:
 
 	ultimo_texto = texto
 
-	if interromper:
+	if interromper and DisplayServer.tts_is_speaking():
 		DisplayServer.tts_stop()
 
 	if voz_id.is_empty():
