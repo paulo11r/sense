@@ -9,6 +9,8 @@ extends Control
 
 
 func _ready() -> void:
+	preload("res://scripts/VisualDesign.gd").apply(self)
+	preload("res://scripts/VisualDesign.gd").enter(self)
 	botao_audio.toggle_mode = true
 	botao_voz.toggle_mode = true
 

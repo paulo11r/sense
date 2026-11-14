@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bxuy0ylvobgv"]
 
-[ext_resource type="Script" uid="uid://bthcy4y3h2n8m" path="res://scripts/PopupIntensidade.gd" id="1_hb6yg"]
-[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="2_iac1l"]
-[ext_resource type="FontFile" uid="uid://doai2d4vwddkw" path="res://fontes/Fredoka-Regular.ttf" id="3_apucm"]
+[ext_resource type="Script" path="res://scripts/PopupIntensidade.gd" id="1_hb6yg"]
+[ext_resource type="FontVariation" path="res://fontes/Heading.tres" id="2_iac1l"]
+[ext_resource type="FontVariation" path="res://fontes/Body.tres" id="3_apucm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i17p"]
 bg_color = Color(0.96862745, 0.9607843, 1, 1)

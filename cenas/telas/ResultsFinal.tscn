@@ -1,222 +1,187 @@
-[gd_scene format=3 uid="uid://byow5od2idojq"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://dytxjd7vqbgcd" path="res://scripts/ResultFinal.gd" id="1_xiwro"]
-[ext_resource type="Texture2D" uid="uid://dpofc74vkfv4a" path="res://recursos/imagens/5093116.png" id="2_d3hi8"]
-[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="3_pnmxw"]
-[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="11_5kbm4"]
+[ext_resource type="FontVariation" path="res://fontes/Body.tres" id="1"]
+[ext_resource type="FontVariation" path="res://fontes/Heading.tres" id="2"]
+[ext_resource type="FontVariation" path="res://fontes/Medium.tres" id="3"]
+[ext_resource type="Script" path="res://scripts/ResultFinal.gd" id="4"]
+[ext_resource type="Texture2D" path="res://recursos/ui/arrow-left.svg" id="5"]
+[ext_resource type="Texture2D" path="res://recursos/ui/accessibility.svg" id="6"]
+[ext_resource type="Texture2D" path="res://recursos/openmoji/1F60C.svg" id="7"]
+[ext_resource type="Texture2D" path="res://recursos/ui/volume-2-white.svg" id="8"]
+[ext_resource type="Texture2D" path="res://recursos/ui/rotate-ccw.svg" id="9"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7drs"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 24
-corner_radius_top_right = 24
-corner_radius_bottom_right = 24
-corner_radius_bottom_left = 24
-shadow_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
-shadow_size = 8
-shadow_offset = Vector2(0, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw5pw"]
-bg_color = Color(0.9098039, 0.88235295, 1, 1)
-corner_radius_top_left = 24
-corner_radius_top_right = 24
-corner_radius_bottom_right = 42
-corner_radius_bottom_left = 42
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atxh7"]
-bg_color = Color(0.9529412, 0.9411765, 1, 1)
-corner_radius_top_left = 24
-corner_radius_top_right = 24
-corner_radius_bottom_right = 24
-corner_radius_bottom_left = 24
-shadow_size = 8
-shadow_offset = Vector2(0, 4)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiwro"]
-content_margin_left = 24.0
-content_margin_top = 32.0
-content_margin_right = 24.0
-content_margin_bottom = 32.0
-bg_color = Color(0.9019608, 0.94509804, 0.9882353, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.16078432, 0.4, 0.7490196, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oom3t"]
-bg_color = Color(0.8392157, 0.89411765, 0.9607843, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uxpv"]
-bg_color = Color(0.1764706, 0.5568628, 0.68235296, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdm2o"]
-bg_color = Color(0.35686275, 0.60784316, 0.8352941, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c2fn"]
-bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[node name="ResultsFinal" type="Control" unique_id=969584554]
+[node name="ResultsFinal" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_xiwro")
+script = ExtResource("4")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=905110839]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.98039, 0.96863, 0.94902, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 56
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.9647059, 0.972549, 0.99607843, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1758560582]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 30
-
-[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=2096732452]
+[node name="Content" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 105
+theme_override_constants/separation = 32
 
-[node name="Header" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1377349490]
+[node name="Header" type="HBoxContainer" parent="MarginContainer/Content"]
 layout_mode = 2
-theme_override_constants/separation = 15
-alignment = 1
+theme_override_constants/separation = 24
 
-[node name="BackButton" type="Button" parent="MarginContainer/Content/Header" unique_id=357881719]
-custom_minimum_size = Vector2(56, 56)
+[node name="BackButton" type="Button" parent="MarginContainer/Content/Header"]
 layout_mode = 2
-size_flags_vertical = 4
-icon = ExtResource("2_d3hi8")
-flat = true
+custom_minimum_size = Vector2(100, 100)
+text = ""
+theme_override_font_sizes/font_size = 38
+icon = ExtResource("5")
 expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_constants/h_separation = 20
 
-[node name="Title" type="Label" parent="MarginContainer/Content/Header" unique_id=546178113]
+[node name="Title" type="Label" parent="MarginContainer/Content/Header"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.18824, 0.14902, 0.24706, 1)
+text = "SUA ESCOLHA"
+mouse_filter = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.05
-theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
-theme_override_fonts/font = ExtResource("3_pnmxw")
-theme_override_font_sizes/font_size = 56
-text = "Sentir e jogar"
-horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header" unique_id=509292444]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.40392157, 0.3137255, 0.7882353, 1)
-theme_override_colors/font_hover_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
-theme_override_colors/icon_pressed_color = Color(0.28627452, 0.20784314, 0.6509804, 1)
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_t7drs")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_qw5pw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_atxh7")
-text = "♿"
-flat = true
-
-[node name="Subtitle" type="Label" parent="MarginContainer/Content" unique_id=1046966377]
-custom_minimum_size = Vector2(60, 50)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
-theme_override_fonts/font = ExtResource("3_pnmxw")
-theme_override_font_sizes/font_size = 57
-text = "Tudo bem sentir isso.
-Você não precisa esconder o que está sentindo."
 horizontal_alignment = 1
-autowrap_mode = 2
 
-[node name="ResultCard" type="PanelContainer" parent="MarginContainer/Content" unique_id=470905401]
+[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 100)
+text = ""
+theme_override_font_sizes/font_size = 38
+icon = ExtResource("6")
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_constants/h_separation = 20
+
+[node name="Step" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.48235, 0.35294, 0.7098, 1)
+text = "OBRIGADO POR COMPARTILHAR"
+mouse_filter = 2
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 82
+theme_override_colors/font_color = Color(0.18824, 0.14902, 0.24706, 1)
+text = "Tudo bem\nsentir isso."
+mouse_filter = 2
+autowrap_mode = 2
+size_flags_horizontal = 3
+
+[node name="Helper" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 34
+theme_override_colors/font_color = Color(0.45882, 0.40784, 0.50196, 1)
+text = "Você pode mostrar esta tela para alguém."
+mouse_filter = 2
+autowrap_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResultCard" type="PanelContainer" parent="MarginContainer/Content"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_xiwro")
 
-[node name="CardContent" type="VBoxContainer" parent="MarginContainer/Content/ResultCard" unique_id=385082465]
+[node name="CardContent" type="VBoxContainer" parent="MarginContainer/Content/ResultCard"]
 layout_mode = 2
-theme_override_constants/separation = 26
+theme_override_constants/separation = 24
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1872160242]
-custom_minimum_size = Vector2(90, 90)
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Content/ResultCard/CardContent"]
+texture_filter = 2
 layout_mode = 2
+custom_minimum_size = Vector2(300, 300)
+texture = ExtResource("7")
 expand_mode = 1
 stretch_mode = 5
+mouse_filter = 2
 
-[node name="NomeLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=586981737]
+[node name="NomeLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
-theme_override_fonts/font = ExtResource("3_pnmxw")
-theme_override_font_sizes/font_size = 95
-text = "Triste"
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 76
+theme_override_colors/font_color = Color(0.18824, 0.14902, 0.24706, 1)
+text = "Calmo"
+mouse_filter = 2
 horizontal_alignment = 1
+autowrap_mode = 2
+size_flags_horizontal = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Content/ResultCard/CardContent" unique_id=1531791581]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Content/ResultCard/CardContent"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_oom3t")
 
-[node name="TagLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent/PanelContainer" unique_id=522955198]
+[node name="TagLabel" type="Label" parent="MarginContainer/Content/ResultCard/CardContent/PanelContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_pnmxw")
-theme_override_font_sizes/font_size = 49
-theme_override_styles/normal = SubResource("StyleBoxFlat_8uxpv")
-text = "Você escolheu esse sentimento"
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.38431, 0.32549, 0.4549, 1)
+text = "É assim que eu me sinto agora."
+mouse_filter = 2
 horizontal_alignment = 1
+autowrap_mode = 2
+size_flags_horizontal = 3
 
-[node name="ActionButtons" type="HBoxContainer" parent="MarginContainer/Content" unique_id=263154213]
+[node name="ActionButtons" type="VBoxContainer" parent="MarginContainer/Content"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 67
+theme_override_constants/separation = 18
 
-[node name="PlayAgainButton" type="Button" parent="MarginContainer/Content/ActionButtons" unique_id=1056929673]
-custom_minimum_size = Vector2(450, 130)
+[node name="RetryButton" type="Button" parent="MarginContainer/Content/ActionButtons"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_pnmxw")
-theme_override_font_sizes/font_size = 56
-theme_override_styles/normal = SubResource("StyleBoxFlat_fdm2o")
-text = "🔁Fazer de Novo"
-
-[node name="RetryButton" type="Button" parent="MarginContainer/Content/ActionButtons" unique_id=1151163259]
-custom_minimum_size = Vector2(470, 90)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_pnmxw")
-theme_override_font_sizes/font_size = 54
-theme_override_styles/normal = SubResource("StyleBoxFlat_3c2fn")
-text = "🔊Ouvir Novamente"
-
-[node name="Instruction" type="Label" parent="MarginContainer/Content" unique_id=438095753]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.45882353, 0.44313726, 0.5254902, 1)
-theme_override_fonts/font = ExtResource("11_5kbm4")
+custom_minimum_size = Vector2(0, 120)
+text = "Ouvir minha escolha"
 theme_override_font_sizes/font_size = 38
-text = "Ouça novamente ou tente escolher outro sentimento"
+icon = ExtResource("8")
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_constants/h_separation = 20
+
+[node name="PlayAgainButton" type="Button" parent="MarginContainer/Content/ActionButtons"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 110)
+text = "Escolher novamente"
+theme_override_font_sizes/font_size = 38
+icon = ExtResource("9")
+expand_icon = true
+theme_override_constants/icon_max_width = 42
+theme_override_constants/h_separation = 20
+
+[node name="Instruction" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 29
+theme_override_colors/font_color = Color(0.45882, 0.40784, 0.50196, 1)
+text = "Se precisar, peça ajuda a alguém de confiança."
+mouse_filter = 2
 horizontal_alignment = 1
+autowrap_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="pressed" from="MarginContainer/Content/Header/AcessibilityButton" to="." method="_on_accessibility_pressed"]
