@@ -1,179 +1,186 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cp2ju6y3rvqcy"]
 
-[ext_resource type="FontVariation" path="res://fontes/Body.tres" id="1"]
-[ext_resource type="FontVariation" path="res://fontes/Heading.tres" id="2"]
-[ext_resource type="FontVariation" path="res://fontes/Medium.tres" id="3"]
-[ext_resource type="Script" path="res://scripts/Feelings.gd" id="4"]
-[ext_resource type="Texture2D" path="res://recursos/ui/arrow-left.svg" id="5"]
-[ext_resource type="Texture2D" path="res://recursos/ui/accessibility.svg" id="6"]
-[ext_resource type="PackedScene" path="res://cenas/componentes/FeelingsCard.tscn" id="7"]
-[ext_resource type="Texture2D" path="res://recursos/openmoji/1F60C.svg" id="8"]
-[ext_resource type="Texture2D" path="res://recursos/openmoji/1F623.svg" id="9"]
-[ext_resource type="Texture2D" path="res://recursos/openmoji/1F628.svg" id="10"]
-[ext_resource type="Texture2D" path="res://recursos/openmoji/1F622.svg" id="11"]
-[ext_resource type="Texture2D" path="res://recursos/openmoji/1F922.svg" id="12"]
-[ext_resource type="Texture2D" path="res://recursos/openmoji/1F62B.svg" id="13"]
+[ext_resource type="Script" uid="uid://dtbrt8dq4anqk" path="res://scripts/Feelings.gd" id="1_j4s1e"]
+[ext_resource type="PackedScene" uid="uid://bykcl4crlqfs6" path="res://cenas/componentes/FeelingsCard.tscn" id="1_lhfn3"]
+[ext_resource type="Texture2D" uid="uid://dpofc74vkfv4a" path="res://recursos/imagens/5093116.png" id="1_qw5pw"]
+[ext_resource type="FontFile" uid="uid://bi6d74uev7i4j" path="res://fontes/Fredoka_Condensed-Bold.ttf" id="1_t7drs"]
+[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="2_qw5pw"]
+[ext_resource type="Texture2D" uid="uid://vrrjngqmdwkm" path="res://recursos/imagens/Emojis/1f642.png" id="4_atxh7"]
+[ext_resource type="Texture2D" uid="uid://c55cyaov37hcf" path="res://recursos/imagens/Emojis/1f915.png" id="5_j3wnh"]
+[ext_resource type="Texture2D" uid="uid://dnjk43e6u5hpy" path="res://recursos/imagens/Emojis/1f628.png" id="6_6sp3q"]
+[ext_resource type="Texture2D" uid="uid://b7gvofg2u7lnf" path="res://recursos/imagens/Emojis/1f622.png" id="7_nc0fs"]
+[ext_resource type="Texture2D" uid="uid://cuagqwmhupsd3" path="res://recursos/imagens/Emojis/1f922.png" id="8_tkooj"]
+[ext_resource type="Texture2D" uid="uid://cg4jpo14nrblp" path="res://recursos/imagens/Emojis/1f971.png" id="9_4610y"]
 
-[node name="Feelings" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7drs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw5pw"]
+bg_color = Color(0.9098039, 0.88235295, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_atxh7"]
+bg_color = Color(0.9529412, 0.9411765, 1, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[node name="Feelings" type="Control" unique_id=969584554]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("4")
+script = ExtResource("1_j4s1e")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=905110839]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-color = Color(0.98039, 0.96863, 0.94902, 1)
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-theme_override_constants/margin_left = 56
-theme_override_constants/margin_top = 56
-theme_override_constants/margin_right = 56
-theme_override_constants/margin_bottom = 56
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.9647059, 0.972549, 0.99607843, 1)
 
-[node name="Content" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 28
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1758560582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
 
-[node name="Header" type="HBoxContainer" parent="MarginContainer/Content"]
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=2096732452]
 layout_mode = 2
-theme_override_constants/separation = 24
+theme_override_constants/separation = 18
 
-[node name="BackButton" type="Button" parent="MarginContainer/Content/Header"]
+[node name="Header" type="HBoxContainer" parent="MarginContainer/Content" unique_id=1377349490]
 layout_mode = 2
-custom_minimum_size = Vector2(100, 100)
-text = ""
-theme_override_font_sizes/font_size = 38
-icon = ExtResource("5")
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/Content/Header" unique_id=357881719]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("1_qw5pw")
+flat = true
 expand_icon = true
-theme_override_constants/icon_max_width = 42
-theme_override_constants/h_separation = 20
 
-[node name="Title" type="Label" parent="MarginContainer/Content/Header"]
+[node name="Title" type="Label" parent="MarginContainer/Content/Header" unique_id=546178113]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2")
-theme_override_font_sizes/font_size = 34
-theme_override_colors/font_color = Color(0.18824, 0.14902, 0.24706, 1)
-text = "SEUS SENTIMENTOS"
-mouse_filter = 2
 size_flags_horizontal = 3
-vertical_alignment = 1
+size_flags_stretch_ratio = 1.05
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("1_t7drs")
+theme_override_font_sizes/font_size = 56
+text = "Sentir e jogar"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header"]
+[node name="AcessibilityButton" type="Button" parent="MarginContainer/Content/Header" unique_id=509292444]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
-custom_minimum_size = Vector2(100, 100)
-text = ""
-theme_override_font_sizes/font_size = 38
-icon = ExtResource("6")
-expand_icon = true
-theme_override_constants/icon_max_width = 42
-theme_override_constants/h_separation = 20
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.40392157, 0.3137255, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(0.33333334, 0.25882354, 0.70980394, 1)
+theme_override_colors/icon_pressed_color = Color(0.28627452, 0.20784314, 0.6509804, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_t7drs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qw5pw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_atxh7")
+text = "♿"
+flat = true
 
-[node name="Step" type="Label" parent="MarginContainer/Content"]
+[node name="Subtitle" type="Label" parent="MarginContainer/Content" unique_id=1046966377]
+custom_minimum_size = Vector2(60, 50)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2")
-theme_override_font_sizes/font_size = 26
-theme_override_colors/font_color = Color(0.48235, 0.35294, 0.7098, 1)
-text = "VAMOS CONVERSAR"
-mouse_filter = 2
-
-[node name="Subtitle" type="Label" parent="MarginContainer/Content"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2")
-theme_override_font_sizes/font_size = 70
-theme_override_colors/font_color = Color(0.18824, 0.14902, 0.24706, 1)
-text = "Como você está\nse sentindo agora?"
-mouse_filter = 2
+theme_override_colors/font_color = Color(0.17254902, 0.14509805, 0.3372549, 1)
+theme_override_fonts/font = ExtResource("1_t7drs")
+theme_override_font_sizes/font_size = 46
+text = "Como você está se sentindo agora?"
+horizontal_alignment = 1
 autowrap_mode = 2
-size_flags_horizontal = 3
 
-[node name="Helper" type="Label" parent="MarginContainer/Content"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 32
-theme_override_colors/font_color = Color(0.45882, 0.40784, 0.50196, 1)
-text = "Escolha a imagem que mais combina com você."
-mouse_filter = 2
-autowrap_mode = 2
-size_flags_horizontal = 3
-
-[node name="FeelingsGrid" type="GridContainer" parent="MarginContainer/Content"]
+[node name="FeelingsGrid" type="GridContainer" parent="MarginContainer/Content" unique_id=958178353]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 12
 columns = 2
-theme_override_constants/h_separation = 24
-theme_override_constants/v_separation = 24
 
-[node name="FeelingsCard" parent="MarginContainer/Content/FeelingsGrid" instance=ExtResource("7")]
+[node name="FeelingsCard" parent="MarginContainer/Content/FeelingsGrid" unique_id=71636295 instance=ExtResource("1_lhfn3")]
 layout_mode = 2
 feeling_name = "Calmo"
-feeling_description = "Tranquilo e à vontade"
-feeling_icon = ExtResource("8")
-card_color = Color(0.90588, 0.9451, 0.92549, 1)
-accent_color = Color(0.19608, 0.41961, 0.33725, 1)
+feeling_description = "Tranquilo e bem"
+feeling_icon = ExtResource("4_atxh7")
+card_color = Color(0.9098039, 0.972549, 0.92941177, 1)
+accent_color = Color(0.16862746, 0.47843137, 0.24705882, 1)
 
-[node name="FeelingsCard2" parent="MarginContainer/Content/FeelingsGrid" instance=ExtResource("7")]
+[node name="FeelingsCard2" parent="MarginContainer/Content/FeelingsGrid" unique_id=1512685285 instance=ExtResource("1_lhfn3")]
 layout_mode = 2
 feeling_name = "Com dor"
-feeling_description = "Algo está doendo"
-feeling_icon = ExtResource("9")
-card_color = Color(0.98039, 0.91373, 0.88627, 1)
-accent_color = Color(0.63137, 0.3098, 0.23529, 1)
+feeling_description = "Doí em algum lugar"
+feeling_icon = ExtResource("5_j3wnh")
+card_color = Color(0.9882353, 0.91764706, 0.91764706, 1)
+accent_color = Color(0.7490196, 0.14901961, 0.14901961, 1)
 
-[node name="FeelingsCard3" parent="MarginContainer/Content/FeelingsGrid" instance=ExtResource("7")]
+[node name="FeelingsCard3" parent="MarginContainer/Content/FeelingsGrid" unique_id=1879009879 instance=ExtResource("1_lhfn3")]
 layout_mode = 2
 feeling_name = "Com medo"
-feeling_description = "Assustado ou inseguro"
-feeling_icon = ExtResource("10")
-card_color = Color(0.93333, 0.9098, 0.96863, 1)
-accent_color = Color(0.43922, 0.32549, 0.61961, 1)
+feeling_description = "Assustado ou nervoso"
+feeling_icon = ExtResource("6_6sp3q")
+card_color = Color(0.9411765, 0.9137255, 0.98039216, 1)
+accent_color = Color(0.41960785, 0.23921569, 0.6784314, 1)
 
-[node name="FeelingsCard4" parent="MarginContainer/Content/FeelingsGrid" instance=ExtResource("7")]
+[node name="FeelingsCard4" parent="MarginContainer/Content/FeelingsGrid" unique_id=236262717 instance=ExtResource("1_lhfn3")]
 layout_mode = 2
 feeling_name = "Triste"
-feeling_description = "Desanimado, sem alegria"
-feeling_icon = ExtResource("11")
-card_color = Color(0.90588, 0.93333, 0.97255, 1)
-accent_color = Color(0.2549, 0.41176, 0.59216, 1)
+feeling_description = "Vontade de chorar"
+feeling_icon = ExtResource("7_nc0fs")
+card_color = Color(0.9019608, 0.94509804, 0.9882353, 1)
+accent_color = Color(0.16078432, 0.4, 0.7490196, 1)
 
-[node name="FeelingsCard5" parent="MarginContainer/Content/FeelingsGrid" instance=ExtResource("7")]
+[node name="FeelingsCard5" parent="MarginContainer/Content/FeelingsGrid" unique_id=64177602 instance=ExtResource("1_lhfn3")]
 layout_mode = 2
 feeling_name = "Enjoado"
-feeling_description = "Vontade de vomitar"
-feeling_icon = ExtResource("12")
-card_color = Color(0.93333, 0.94118, 0.87451, 1)
-accent_color = Color(0.38039, 0.43922, 0.22353, 1)
+feeling_description = "Barriga estranha"
+feeling_icon = ExtResource("8_tkooj")
+card_color = Color(0.9607843, 0.9490196, 0.87058824, 1)
+accent_color = Color(0.5019608, 0.4, 0.09803922, 1)
 
-[node name="FeelingsCard6" parent="MarginContainer/Content/FeelingsGrid" instance=ExtResource("7")]
+[node name="FeelingsCard6" parent="MarginContainer/Content/FeelingsGrid" unique_id=1492459429 instance=ExtResource("1_lhfn3")]
 layout_mode = 2
 feeling_name = "Cansado"
-feeling_description = "Precisando descansar"
-feeling_icon = ExtResource("13")
-card_color = Color(0.96863, 0.93333, 0.87451, 1)
-accent_color = Color(0.56078, 0.41961, 0.18824, 1)
+feeling_description = "Sem energia"
+feeling_icon = ExtResource("9_4610y")
+card_color = Color(0.9882353, 0.9411765, 0.88235295, 1)
+accent_color = Color(0.78039217, 0.41960785, 0.09803922, 1)
 
-[node name="Instruction" type="Label" parent="MarginContainer/Content"]
+[node name="Instruction" type="Label" parent="MarginContainer/Content" unique_id=1579923900]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1")
-theme_override_font_sizes/font_size = 28
-theme_override_colors/font_color = Color(0.45882, 0.40784, 0.50196, 1)
-text = "Você pode voltar e escolher outra opção."
-mouse_filter = 2
+theme_override_colors/font_color = Color(0.45882353, 0.44313726, 0.5254902, 1)
+theme_override_fonts/font = ExtResource("2_qw5pw")
+theme_override_font_sizes/font_size = 30
+text = "Toque no que mais combina com você"
 horizontal_alignment = 1
-autowrap_mode = 2
-size_flags_horizontal = 3
 
 [connection signal="pressed" from="MarginContainer/Content/Header/AcessibilityButton" to="." method="_on_accessibility_pressed"]

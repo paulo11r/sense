@@ -30,14 +30,12 @@ func _ready() -> void:
 
 
 func _load_feeling_data() -> void:
-	nome_label.text = GameState.selected_feeling
+	nome_label.text = GameState.selected_feeling.to_upper()
 	if _sentimento_e_dor():
-		nome_label.text += "\n" + GameState.pain_location
+		nome_label.text += "\n" + GameState.pain_location.to_upper()
 
 	if GameState.selected_icon != null:
 		feeling_icon.texture = GameState.selected_icon
-		if _sentimento_e_dor() and GameState.pain_icon != null:
-			feeling_icon.texture = GameState.pain_icon
 	else:
 		feeling_icon.texture = null
 		push_warning(
@@ -110,8 +108,8 @@ func _apply_card_colors() -> void:
 	style.bg_color = GameState.selected_bg_color
 	style.border_color = GameState.selected_border_color
 
-	style.set_corner_radius_all(40)
-	style.set_border_width_all(0)
+	style.set_corner_radius_all(24)
+	style.set_border_width_all(3)
 
 	result_card.add_theme_stylebox_override(
 		"panel",
