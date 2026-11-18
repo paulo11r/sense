@@ -11,7 +11,7 @@ func _ready() -> void:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_WM_GO_BACK_REQUEST:
 		DisplayServer.tts_stop()
-        
+		
 	elif what == NOTIFICATION_APPLICATION_PAUSED:
 		DisplayServer.tts_stop()
 

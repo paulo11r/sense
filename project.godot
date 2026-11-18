@@ -10,26 +10,32 @@ config_version=5
 
 [application]
 
-config/name="sense"
-run/main_scene="uid://y4xd1l6j347i"
+config/name="Sense"
+run/main_scene="res://cenas/telas/App.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
-boot_splash/bg_color=Color(0.9647059, 0.7882353, 0.95686275, 1)
-boot_splash/image="uid://mw0srv6i857f"
-config/icon="uid://mw0srv6i857f"
+boot_splash/bg_color=Color(0.98039, 0.96863, 0.94902, 1)
+boot_splash/image="res://recursos/ui/sense-app.svg"
+config/icon="res://recursos/ui/sense-app.svg"
 
 [autoload]
 
-GameState="*uid://cunr1wb0gwei8"
-AcessibilityManager="*uid://bjeap4mo38mmv"
-AudioManager="*uid://cdmo21xisxo32"
+GameState="*res://scripts/GameState.gd"
+AcessibilityManager="*res://scripts/AcessibilityManager.gd"
+AudioManager="*res://scripts/AudioManager.gd"
 
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=1920
+window/size/window_width_override=432
+window/size/window_height_override=768
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
+
+[gui]
+
+theme/custom="res://temas/SenseDesign.tres"
 
 [physics]
 

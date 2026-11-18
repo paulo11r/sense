@@ -1,47 +1,67 @@
-[gd_scene format=3 uid="uid://caw2ap1ewby3t"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://bvsl7inhddpot" path="res://scripts/Feelings_card.gd" id="1_8rbow"]
-[ext_resource type="FontFile" uid="uid://cam5b62ntlsve" path="res://fontes/Fredoka-Medium.ttf" id="2_y3nvd"]
+[ext_resource type="FontVariation" path="res://fontes/Body.tres" id="1"]
+[ext_resource type="FontVariation" path="res://fontes/Heading.tres" id="2"]
+[ext_resource type="FontVariation" path="res://fontes/Medium.tres" id="3"]
+[ext_resource type="Script" path="res://scripts/Feelings_card.gd" id="4"]
+[ext_resource type="Texture2D" path="res://recursos/openmoji/1F60C.svg" id="5"]
 
-[node name="FeelingsCard" type="Button" unique_id=71636295]
-custom_minimum_size = Vector2(280, 280)
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="FeelingsCard" type="Button"]
+custom_minimum_size = Vector2(0, 320)
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_8rbow")
+script = ExtResource("4")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1954785590]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+mouse_filter = 2
 layout_mode = 1
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=1120968421]
+[node name="Content" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 8
 alignment = 1
+mouse_filter = 2
 
-[node name="IconContainer" type="CenterContainer" parent="MarginContainer/Content" unique_id=2126750079]
-custom_minimum_size = Vector2(0, 90)
+[node name="IconContainer" type="CenterContainer" parent="MarginContainer/Content"]
 layout_mode = 2
+custom_minimum_size = Vector2(0, 170)
+mouse_filter = 2
 
-[node name="Icon" type="TextureRect" parent="MarginContainer/Content/IconContainer" unique_id=1855970457]
-custom_minimum_size = Vector2(80, 80)
+[node name="Icon" type="TextureRect" parent="MarginContainer/Content/IconContainer"]
+texture_filter = 2
 layout_mode = 2
+custom_minimum_size = Vector2(160, 170)
+texture = ExtResource("5")
 expand_mode = 1
 stretch_mode = 5
+mouse_filter = 2
 
-[node name="NameLabel" type="Label" parent="MarginContainer/Content" unique_id=1095730472]
+[node name="NameLabel" type="Label" parent="MarginContainer/Content"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_y3nvd")
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(0.18824, 0.14902, 0.24706, 1)
+text = "Calmo"
+mouse_filter = 2
 horizontal_alignment = 1
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/Content" unique_id=1456908845]
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/Content"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_y3nvd")
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.38431, 0.32549, 0.4549, 1)
+text = "Tranquilo e à vontade"
+mouse_filter = 2
 horizontal_alignment = 1
+autowrap_mode = 2
+size_flags_horizontal = 3
+
