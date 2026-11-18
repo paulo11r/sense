@@ -29,5 +29,3 @@ func load_screen(scene_path: String) -> void:
 
 	current_screen = scene_resource.instantiate()
 	screen_container.add_child(current_screen)
-	preload("res://scripts/VisualDesign.gd").apply(current_screen)
-	preload("res://scripts/VisualDesign.gd").enter(current_screen)

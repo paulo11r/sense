@@ -1,6 +1,6 @@
 extends Control
 
-@onready var start_button: Button = $SafeArea/MainColumn/Hero/StartButton
+@onready var start_button: Button = $SafeArea/MainColumn/Hero/HeroText/StartButton
 @onready var accessibility_button: Button = $SafeArea/MainColumn/TopSection/AccessibilityButton
 
 var popup_acessibilidade_scene := preload(
